@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 1300px;
+    margin: auto;
+    color: white;
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .names {
+      font-size: 16px;
+    }
+  
+    .icon {
+      font-size: 20px;
+    }
+  }
+  
+  .ImageContainer {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        black 
+      );
+      opacity: 0.9;
+    }
+  }
