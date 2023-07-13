@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 const NameIcon = styled.div`
@@ -10,13 +11,17 @@ const NameIcon = styled.div`
 const Header = () => {
   return (
     <div className="header">
-      <div className="logo">🔨 PSF</div>
+      <Image src="/images/pfs-logo.png"
+       alt="Descrição da imagem"
+       width={60}
+       height={60}
+       />
       <NameIcon>
+        <div className="icon">🔍</div>
         <div className="names">Krilin Carec</div>
-        <div className="icon">🪙</div>
       </NameIcon>
     </div>
   );
-}
+};
 
 export default Header;

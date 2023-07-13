@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const ImageContainer = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 85vh;
   top: 0;
   z-index: -1;
   }
@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
       <ImageContainer className="ImageContainer">
         <Image
           src="/images/tank2.jpeg"
-          alt="Descrição da imagem"
+          alt="Background Tank Game"
           layout="fill"
           />
       </ImageContainer>
