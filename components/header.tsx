@@ -12,7 +12,8 @@ const Header = () => {
   return (
     <div className="header">
       <Image src="/images/pfs-logo.png"
-       alt="Descrição da imagem"
+      className="logo"
+       alt="Pixels Forge Studio Logo"
        width={60}
        height={60}
        />

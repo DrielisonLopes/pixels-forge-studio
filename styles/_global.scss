@@ -9,13 +9,13 @@ body {
 button {
   background: $main-color;
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
-  font-weight: bold;
-  padding: 6px 12px;
+  font-weight: 400;
+  padding: 10px 12px;
   margin-right: 4px;
   border: 2px solid $main-color;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
 
   transition: background ease .3s, border ease .3s;

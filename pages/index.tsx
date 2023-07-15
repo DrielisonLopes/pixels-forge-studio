@@ -4,6 +4,15 @@ import AboutGame from '../components/aboutGame'
 
 import styled from 'styled-components';
 
+const HeaderContainer = styled.div`
+  background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.9),
+  rgba(0, 0, 0, 0.5),
+  transparent
+);
+  }
+`;
 const ImageContainer = styled.div`
   position: absolute;
   width: 100%;
@@ -16,7 +25,9 @@ const ImageContainer = styled.div`
 const HomePage: React.FC = () => {
   return (
     <div>
-      <Header/>
+      <HeaderContainer>
+        <Header/>
+      </HeaderContainer>
       <ImageContainer className="ImageContainer">
         <Image
           src="/images/cityTank/city-tank-bg.png"
