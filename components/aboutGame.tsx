@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 
 import Image from "next/image";
 import styled from 'styled-components';
+import GameList from './GameList';
 
 interface GameContentProps {
   children: ReactNode;
@@ -19,8 +20,7 @@ const GameContent = styled.div<GameContentProps>`
 `;
 
 const GameImages = styled.div<GameContentProps>`
-  dispay: flex;
-  justify-content: center;
+  display: flex;
   padding: 0;
   position: relative;
   height: 100%;
@@ -39,7 +39,6 @@ const AboutGame: React.FC = (): ReactNode => {
   const tankImages = [
     "/images/cityTank/city-tank2.png",
     "/images/cityTank/city-tank1.png",
-    // Adicione aqui os caminhos de outras imagens "tank"
   ];
 
   return (
@@ -50,21 +49,7 @@ const AboutGame: React.FC = (): ReactNode => {
         <button>Download</button>
         <button className="transparent">More info</button>
       </div>
-      <div>
-        <h3>GAME PLAY</h3>
-        <GameImages 
-              className="">
-          {tankImages.map((image, index) => (
-            <Image
-              key={index}
-              src={image}
-              alt="City Tank Game play Image"
-              width={250}
-              height={200}
-            />
-          ))}
-        </GameImages>
-      </div>
+      <GameList/>
     </GameContent>
   );
 }

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Header from '../components/header'
 import AboutGame from '../components/aboutGame'
+import Footer from '../components/footer'
 
 import styled from 'styled-components';
 
@@ -36,6 +37,7 @@ const HomePage: React.FC = () => {
           />
       </ImageContainer>
       <AboutGame />
+      <Footer />
     </div>
   );
 };
