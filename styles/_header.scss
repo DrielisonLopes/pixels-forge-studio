@@ -11,11 +11,38 @@
     }
   
     .icon {
-      font-size: 20px;
+      padding: 6px 12px;
+      font-size: 18px;
+      // transform: rotate(90deg);
+    }
+
+    .rain {
+      background: transparent;
+      color: white;
+      font-weight: 400;
+      padding: 4px 22px;
+      border: 2px solid #b700ff;
+      transition: background ease 0.3s, border ease 0.3s;
+
+      &:hover {
+        background: #562684;
+        border: 2px solid #562684;
+      }
     }
     
-    .names {
-      font-size: 16px;
+    .user {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      line-height: 0;
+
+      span {
+        padding: 10px;
+      }
+
+      .userIcon {
+        font-size: 20px;
+      }
     }
   
   }
