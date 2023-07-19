@@ -39,12 +39,10 @@ const GameList: React.FC = (): ReactNode => {
   return (
       <div>
         <h3 style={{ letterSpacing: '3px' }}>FEATURED GAMES</h3>
-        <GameImages 
-              className="">
+        <GameImages>
           {tankImages.map((image, index) => (
-            <div>
+            <div key={index}>
             <Image
-              key={index}
               src={image}
               alt="City Tank Game play Image"
               width={250}
@@ -55,8 +53,7 @@ const GameList: React.FC = (): ReactNode => {
         </GameImages>
 
         <h3 style={{ letterSpacing: '3px' }}>COMING SOON</h3>
-        <GameImages 
-              className="">
+        <GameImages>
           <Image
             src="/images/cityTank/city-tank1.png"
             alt="City Tank Game play Image"
@@ -70,16 +67,16 @@ const GameList: React.FC = (): ReactNode => {
         </GameImages>
 
         <h3 style={{ letterSpacing: '3px' }}>RECOMMENDED FOR YOU</h3>
-        <GameImages 
-              className="">
+        <GameImages style={{ marginBottom: '60px' }}>
           {tankImages.map((image, index) => (
+            <div key={index}>
             <Image
-              key={index}
               src={image}
               alt="City Tank Game play Image"
               width={250}
               height={200}
             />
+            </div>
           ))}
         </GameImages>
       </div>

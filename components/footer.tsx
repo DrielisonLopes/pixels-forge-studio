@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
-        <p>footer 2023</p>
+    <div style={{ textAlignLast: 'center' }}>
+        <p>Pixels Forge Studio - Copyright © 2023</p>
     </div>
   );
 }
