@@ -9,14 +9,18 @@ interface GameContentProps {
 
 const GameImages = styled.div<GameContentProps>`
   display: flex;
-  padding: 0;
-  position: relative;
-  height: 100%;
-  overflow: hidden;
+
+  div {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    margin: 0 5px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
 
   img {
-    align-self: normal;
-    max-width: none;
+    width: auto;
     margin: 0 5px;
     border-radius: 4px;
   }
@@ -27,6 +31,9 @@ const GameList: React.FC = (): ReactNode => {
   const tankImages = [
     "/images/cityTank/city-tank2.png",
     "/images/cityTank/city-tank1.png",
+    "/images/cityTank/city-tank3.png",
+    "/images/tank.jpg",
+    "/images/tank2.jpeg",
   ];
 
   return (
@@ -35,6 +42,7 @@ const GameList: React.FC = (): ReactNode => {
         <GameImages 
               className="">
           {tankImages.map((image, index) => (
+            <div>
             <Image
               key={index}
               src={image}
@@ -42,6 +50,7 @@ const GameList: React.FC = (): ReactNode => {
               width={250}
               height={200}
             />
+            </div>
           ))}
         </GameImages>
 
@@ -54,10 +63,10 @@ const GameList: React.FC = (): ReactNode => {
             width={510}
             height={200}
           />
-          <div>
+          <aside>
             <h2>Em breve aqui um jogo muito Jogável</h2>
             <button>Preview</button>
-          </div>
+          </aside>
         </GameImages>
 
         <h3 style={{ letterSpacing: '3px' }}>RECOMMENDED FOR YOU</h3>
