@@ -17,12 +17,46 @@ const GameImages = styled.div<GameContentProps>`
     margin: 0 5px;
     border-radius: 4px;
     overflow: hidden;
+
+    transform: scale(1);
+    transition: transform .25s linear;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   img {
     width: auto;
     margin: 0 5px;
     border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &.comingSoon {
+    img {
+      width: 50%;
+      height: auto;
+    }
+    aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 50%;
+      padding: 0 36px;
+
+      button {
+        width: 160px;
+        font-weight: 600; transform: scale(1);
+        transition: transform .25s linear;
+    
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
   }
 `;
 
@@ -37,7 +71,7 @@ const GameList: React.FC = (): ReactNode => {
   ];
 
   return (
-      <div>
+      <div style={{ marginTop: '50px' }}>
         <h3 style={{ letterSpacing: '3px' }}>FEATURED GAMES</h3>
         <GameImages>
           {tankImages.map((image, index) => (
@@ -53,15 +87,16 @@ const GameList: React.FC = (): ReactNode => {
         </GameImages>
 
         <h3 style={{ letterSpacing: '3px' }}>COMING SOON</h3>
-        <GameImages>
+        <GameImages 
+            className="comingSoon">
           <Image
             src="/images/cityTank/city-tank1.png"
             alt="City Tank Game play Image"
-            width={510}
+            width={500}
             height={200}
           />
           <aside>
-            <h2>Em breve aqui um jogo muito Jogável</h2>
+            <h2>Coming soon a NEW MULTIPLAYER GAME to be able to play and have fun with your friends</h2>
             <button>Preview</button>
           </aside>
         </GameImages>

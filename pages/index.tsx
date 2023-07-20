@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Header from '../components/header'
-import AboutGame from '../components/aboutGame'
-import Footer from '../components/footer'
+import Header from '../src/components/header'
+import AboutGame from '../src/components/aboutGame'
+import Footer from '../src/components/footer'
 
 import styled from 'styled-components';
 
@@ -19,7 +19,11 @@ const ImageContainer = styled.div`
   width: 100%;
   height: 80vh;
   top: 0;
+  overflow: hidden;
   z-index: -1;
+
+  img {
+    height: auto !important;
   }
 `;
 
@@ -31,7 +35,7 @@ const HomePage: React.FC = () => {
       </HeaderContainer>
       <ImageContainer className="ImageContainer">
         <Image
-          src="/images/cityTank/city-tank-bg.png"
+          src="/images/cityTank/tank-bg.jpg"
           alt="Background Tank Game"
           layout="fill"
           />
