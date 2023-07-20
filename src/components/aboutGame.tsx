@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import styled from 'styled-components';
 import GameList from './GameList';
+import { ABOUT_GAME } from '@/constants'
+import styled from 'styled-components';
 
 interface GameContentProps {
   children: ReactNode;
@@ -43,8 +44,8 @@ const AboutGame: React.FC = (): ReactNode => {
   return (
     <GameContent>
       <div className="gameContainer">
-        <h1>✨ City Tank</h1>
-        <p>In a peaceful village, invading machines take control of the city, spreading fear and oppression. However, a brave hero emerges, piloting a powerful tank, determined to fight against the machines and restore peace.</p>
+        <h1>✨ {ABOUT_GAME.title}</h1>
+        <p>{ABOUT_GAME.description}</p>
         <button>Download</button>
         <button className="transparent">More info</button>
       </div>

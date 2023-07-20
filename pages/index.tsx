@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import Header from '../src/components/header'
 import AboutGame from '../src/components/aboutGame'
