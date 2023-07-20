@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import GameList from './GameList';
+import GameList from '@/molecules/GameList';
 import { ABOUT_GAME } from '@/constants'
 import styled from 'styled-components';
 
@@ -35,11 +35,6 @@ const GameImages = styled.div<GameContentProps>`
 `;
 
 const AboutGame: React.FC = (): ReactNode => {
-
-  const tankImages = [
-    "/images/cityTank/city-tank2.png",
-    "/images/cityTank/city-tank1.png",
-  ];
 
   return (
     <GameContent>

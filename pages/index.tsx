@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image';
-import Header from '../src/components/header'
-import AboutGame from '../src/components/aboutGame'
-import Footer from '../src/components/footer'
+import Header from '@/molecules/header'
+import AboutGame from '@/molecules/aboutGame'
+import Footer from '@/atoms/footer'
 
 import styled from 'styled-components';
 
