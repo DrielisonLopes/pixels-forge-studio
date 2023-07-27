@@ -1,0 +1,25 @@
+.gameContent {
+  padding: 0 10px;
+  max-width: 1300px;
+  margin: auto;
+
+  .gameContainer {
+    width: 50%;
+    padding: 150px 10px 50px;
+  }
+}
+
+.gameImage {
+  display: flex;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    align-self: normal;
+    max-width: none;
+    margin: 0 5px;
+    border-radius: 4px;
+  }
+}
