@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 
-import Header from "@/molecules/Header";
-import AboutGame from "@/molecules/AboutGame";
+import Header from "@/molecules/Header/Header";
+import AboutGame from "@/molecules/AboutGame/AboutGame";
 import Footer from "@/atoms/Footer";
 import styles from "../styles/_home.module.scss";
 

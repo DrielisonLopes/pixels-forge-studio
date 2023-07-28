@@ -1,34 +1,9 @@
-body {
+@import "variables.module";
+
+.mainContainer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: black;
   color: white;
   padding: 0;
   margin: 0;
-}
-
-button {
-  background: $main-color;
-  color: white;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 400;
-  padding: 10px 12px;
-  margin-right: 4px;
-  border: 2px solid $main-color;
-  border-radius: 4px;
-  cursor: pointer;
-
-  transition: background ease 0.3s, border ease 0.3s;
-
-  &:hover {
-    background: $main-color-dark;
-    border: 2px solid $main-color-dark;
-  }
-
-  &.transparent {
-    background: none;
-    &:hover {
-      background: $main-color-dark;
-    }
-  }
 }
