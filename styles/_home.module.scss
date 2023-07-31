@@ -1,21 +1,45 @@
-.headerContainer {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.5),
-    transparent
-  );
+@import "variables.module";
+
+.mainContainer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
 }
 
-.imageContainer {
-  position: absolute;
-  width: 100%;
-  height: 80vh;
-  top: 0;
-  overflow: hidden;
-  z-index: -1;
+.pageContainer {
+  position: relative;
+  height: 100vh;
 
-  img {
-    height: auto !important;
+  .imageContainer {
+    position: relative;
+    top: -80px;
+    display: flex;
+    z-index: -1;
+    @media (max-width: $screen-md) {
+      overflow: hidden;
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(0deg, #0d0d0d, rgba(11, 11, 14, 0.8), rgba(7, 6, 10, 0.1));
+      height: 1000px;
+      width: 100%;
+      z-index: 1;
+    }
+  
+    img {
+      height: auto !important;
+      
+      @media (max-width: $screen-md) {
+        height: 60vh !important;
+        width: auto !important;
+        margin-left: auto;
+      }
+    }
   }
 }
+
+

@@ -4,13 +4,14 @@ import Image from "next/image";
 
 import Header from "@/molecules/Header/Header";
 import AboutGame from "@/molecules/AboutGame/AboutGame";
+import GameList from "@/molecules/GameList/GameList";
 import Footer from "@/atoms/Footer";
 import styles from "../styles/_home.module.scss";
 
 export default function HomePage() {
   return (
-    <div>
-      <div className={styles.headerContainer}>
+    <div className={styles.pageContainer}>
+      <div>
         <Header />
       </div>
       <div className={styles.imageContainer}>
@@ -19,8 +20,9 @@ export default function HomePage() {
           alt="Background Tank Game"
           layout="fill"
         />
-      </div>
       <AboutGame />
+      </div>
+      <GameList />
       <Footer />
     </div>
   );
