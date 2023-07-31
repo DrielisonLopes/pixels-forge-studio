@@ -1,64 +1,14 @@
 import React, { ReactNode } from 'react';
 
 import Image from "next/image";
-import styled from 'styled-components';
+import Button from "@/atoms/mainButton/Button";
+
+import style from "../../atoms/mainButton/Button.module.scss";
+import styles from "./GameList.module.scss";
 
 interface GameContentProps {
   children: ReactNode;
 }
-
-const GameImages = styled.div<GameContentProps>`
-  display: flex;
-
-  div {
-    display: flex;
-    justify-content: center;
-    width: 250px;
-    margin: 0 5px;
-    border-radius: 4px;
-    overflow: hidden;
-
-    transform: scale(1);
-    transition: transform .25s linear;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  img {
-    width: auto;
-    margin: 0 5px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  &.comingSoon {
-    img {
-      width: 50%;
-      height: auto;
-    }
-    aside {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      width: 50%;
-      padding: 0 36px;
-
-      button {
-        width: 160px;
-        font-weight: 600; transform: scale(1);
-        transition: transform .25s linear;
-    
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
-    }
-  }
-`;
 
 const GameList: React.FC = (): ReactNode => {
 
@@ -73,7 +23,7 @@ const GameList: React.FC = (): ReactNode => {
   return (
       <div style={{ marginTop: '50px' }}>
         <h3 style={{ letterSpacing: '3px' }}>FEATURED GAMES</h3>
-        <GameImages>
+        <div className={styles.gameImages}>
           {tankImages.map((image, index) => (
             <div key={index}>
             <Image
@@ -84,11 +34,10 @@ const GameList: React.FC = (): ReactNode => {
             />
             </div>
           ))}
-        </GameImages>
+        </div>
 
         <h3 style={{ letterSpacing: '3px' }}>COMING SOON</h3>
-        <GameImages 
-            className="comingSoon">
+        <div className={`${styles.gameImages} ${styles.comingSoon}`}>
           <Image
             src="/images/cityTank/city-tank1.png"
             alt="City Tank Game play Image"
@@ -97,12 +46,12 @@ const GameList: React.FC = (): ReactNode => {
           />
           <aside>
             <h2>Coming soon a NEW MULTIPLAYER GAME to be able to play and have fun with your friends</h2>
-            <button>Preview</button>
+            <Button className={style.mainButton}>Preview</Button>
           </aside>
-        </GameImages>
+        </div>
 
         <h3 style={{ letterSpacing: '3px' }}>RECOMMENDED FOR YOU</h3>
-        <GameImages style={{ marginBottom: '60px' }}>
+        <div className={styles.gameImages} style={{ marginBottom: '60px' }}>
           {tankImages.map((image, index) => (
             <div key={index}>
             <Image
@@ -113,7 +62,7 @@ const GameList: React.FC = (): ReactNode => {
             />
             </div>
           ))}
-        </GameImages>
+        </div>
       </div>
   );
 }

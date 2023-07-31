@@ -1,0 +1,21 @@
+.headerContainer {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.5),
+    transparent
+  );
+}
+
+.imageContainer {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+
+  img {
+    height: auto !important;
+  }
+}

@@ -10,6 +10,29 @@
       filter: brightness(1.2);
     }
   
+    .nameIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      
+      div {
+        display: flex;
+        align-items: center;
+        font-family: monospace;
+        background: #494949;
+        height: 100%;
+        margin: 0 4px;
+        padding: 6px 22px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background ease 0.3s, border ease 0.3s;
+        
+        &:hover {
+          background: #562684;
+        }
+      }
+    }
     .icon {
       padding: 6px 12px;
       font-size: 18px;
@@ -17,7 +40,7 @@
     }
 
     .rain {
-      background: transparent;
+      background: transparent !important;
       color: white;
       font-weight: 400;
       padding: 4px 22px;
@@ -63,3 +86,5 @@
       opacity: 0.8;
     }
   }
+
+  
