@@ -1,15 +1,24 @@
+@import "@/variables";
+
 .gameContent {
+  position: relative;
   padding: 0 10px;
   max-width: 1300px;
   margin: auto;
+  z-index: 2;
 
   .gameContainer {
     width: 50%;
     padding: 150px 10px 50px;
+
+    @media (max-width: $screen-lg) {
+      width: 95%;
+      padding: 100px 10px 50px;
+    }
   }
 }
 
-.gameImage {
+.listImage {
   display: flex;
   padding: 0;
   position: relative;

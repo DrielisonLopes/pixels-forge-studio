@@ -1,6 +1,5 @@
 import React from "react";
 
-import GameList from "@/molecules/GameList/GameList";
 import Button from "@/atoms/mainButton/Button";
 
 import { ABOUT_GAME } from "@/constants";
@@ -17,7 +16,6 @@ export default function AboutGame() {
         <Button className={style.mainButton}>Download</Button>
         <Button className={`${style.mainButton} ${style.transparent}`}>More info</Button>
       </div>
-      <GameList />
     </div>
   );
 }
