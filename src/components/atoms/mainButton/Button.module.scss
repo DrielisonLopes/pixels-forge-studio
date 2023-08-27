@@ -1,28 +1,32 @@
 @import "@/variables";
 
 .mainButton {
-    background: $main-color;
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 400;
-    padding: 10px 12px;
-    margin-right: 4px;
-    border: 2px solid $main-color;
-    border-radius: 4px;
+  background: #5966f5;
+  color: white;
+  font-size: 14px;
+  // text-transform: uppercase;
+  font-weight: 400;
+  padding: 12px 24px;
+  margin-right: 4px;
+  // border: 2px solid $main-color;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: none;
+
+  transition: background ease 0.3s, border ease 0.3s;
+
+  &:hover {
+    background: $main-color-dark;
+    border: 2px solid $main-color-dark;
+  }
+
+  &.transparent {
+    background: none;
     cursor: pointer;
-  
-    transition: background ease 0.3s, border ease 0.3s;
-  
     &:hover {
       background: $main-color-dark;
-      border: 2px solid $main-color-dark;
     }
-  
-    &.transparent {
-      background: none;
-      &:hover {
-        background: $main-color-dark;
-      }
-    }
+  }
 }

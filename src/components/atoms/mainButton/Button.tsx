@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
@@ -8,13 +8,14 @@ interface ButtonProps {
   children: React.ReactNode;
 }
 
-const Button: React.FunctionComponent<ButtonProps> = ({ className, type, onClick, children }) => {
+const Button: React.FunctionComponent<ButtonProps> = ({
+  className,
+  type,
+  onClick,
+  children,
+}) => {
   return (
-    <button
-      className={className}
-      type={type}
-      onClick={onClick}
-    >
+    <button className={className} type={type} onClick={onClick}>
       {children}
     </button>
   );

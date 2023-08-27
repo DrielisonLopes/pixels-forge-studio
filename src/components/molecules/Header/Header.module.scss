@@ -1,89 +1,81 @@
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  max-width: 1300px;
+  margin: auto;
+
+  .logo {
+    filter: brightness(1.1);
+  }
+
+  .nameIcon {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    max-width: 1300px;
-    margin: auto;
-  
-    .logo {
-      filter: brightness(1.2);
-    }
-  
-    .nameIcon {
+    justify-content: center;
+    height: 30px;
+
+    div {
       display: flex;
       align-items: center;
-      justify-content: center;
-      height: 30px;
-      
-      div {
-        display: flex;
-        align-items: center;
-        font-family: monospace;
-        background: #494949;
-        height: 100%;
-        margin: 0 4px;
-        padding: 6px 22px;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background ease 0.3s, border ease 0.3s;
-        
-        &:hover {
-          background: #562684;
-        }
-      }
-    }
-    .icon {
-      padding: 6px 12px;
-      font-size: 18px;
-    }
-
-    .rain {
-      background: transparent !important;
-      color: white;
-      font-weight: 400;
-      padding: 4px 22px;
-      border: 2px solid #b700ff;
+      background: #494949;
+      height: 100%;
+      margin: 0 4px;
+      padding: 6px 22px;
+      border-radius: 4px;
+      cursor: pointer;
       transition: background ease 0.3s, border ease 0.3s;
 
       &:hover {
         background: #562684;
-        border: 2px solid #562684;
       }
     }
-    
-    .user {
-      display: flex;
-      justify-content: space-between;
-      padding: 6px 0;
-      line-height: 0;
-
-      span {
-        padding: 2px;
-      }
-
-      .userIcon {
-        font-size: 20px;
-      }
-    }
-  
   }
-  
-  .ImageContainer {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(
-        to bottom,
-        transparent,
-        black 
-      );
-      opacity: 0.8;
+  .icon {
+    padding: 6px 12px;
+    font-size: 18px;
+  }
+
+  .rain {
+    background: transparent !important;
+    color: white;
+    font-weight: 400;
+    padding: 4px 22px;
+    border: 2px solid #b700ff;
+    transition: background ease 0.3s, border ease 0.3s;
+
+    &:hover {
+      background: #562684;
+      border: 2px solid #562684;
     }
   }
 
-  
+  .user {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    line-height: 0;
+
+    span {
+      padding: 2px;
+    }
+
+    .userIcon {
+      font-size: 20px;
+    }
+  }
+}
+
+.ImageContainer {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent, black);
+    opacity: 0.8;
+  }
+}

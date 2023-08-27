@@ -8,8 +8,11 @@
   z-index: 2;
 
   .gameContainer {
+    background-color: rgba(0, 0, 0, 0.6);
     width: 50%;
-    padding: 150px 10px 50px;
+    margin: 350px 10px 50px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.9);
 
     @media (max-width: $screen-lg) {
       width: 95%;

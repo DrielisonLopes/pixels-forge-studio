@@ -16,11 +16,11 @@ export default function HomePage() {
       </div>
       <div className={styles.imageContainer}>
         <Image
-          src="/images/cityTank/tank-bg.jpg"
+          src="/images/banner.jpg"
           alt="Background Tank Game"
           layout="fill"
         />
-      <AboutGame />
+        <AboutGame />
       </div>
       <GameList />
       <Footer />

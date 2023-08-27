@@ -2,9 +2,13 @@ import "../styles/main.module.scss";
 import styles from "../styles/_home.module.scss";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Monda } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const monda = Monda({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${styles.mainContainer}`}>{children}</body>
+      <body className={`${monda.className} ${styles.mainContainer}`}>
+        {children}
+      </body>
     </html>
   );
 }
