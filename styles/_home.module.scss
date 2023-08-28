@@ -1,47 +1,19 @@
 @import "variables.module";
 
 .mainContainer {
-  background-color: black;
+  background: linear-gradient(
+    0deg,
+    rgba(20, 23, 30, 1),
+    rgba(31, 33, 47, 1)
+    );
+  background: #1d1f2d;
   color: white;
   padding: 0;
   margin: 0;
 }
 
-.pageContainer {
+.imageContainer {
+  display: flex;
   position: relative;
-  height: 100vh;
-
-  .imageContainer {
-    position: relative;
-    top: -80px;
-    display: flex;
-    z-index: -1;
-    @media (max-width: $screen-md) {
-      overflow: hidden;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background: linear-gradient(
-        0deg,
-        #0d0d0d,
-        rgba(11, 11, 14, 0.8),
-        rgba(7, 6, 10, 0.1)
-      );
-      height: 1000px;
-      width: 100%;
-      z-index: 1;
-    }
-
-    img {
-      height: auto !important;
-
-      @media (max-width: $screen-md) {
-        height: 60vh !important;
-        width: auto !important;
-        margin-left: auto;
-      }
-    }
-  }
+  height: 100%;
 }

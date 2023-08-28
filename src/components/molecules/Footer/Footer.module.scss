@@ -1,0 +1,41 @@
+@import "@/variables";
+
+.container {
+  background: #191c1e;
+  text-align: center;
+  margin: 0;
+  padding: 3rem 0 5rem;
+  
+  img {
+    width: 120px;
+    height: auto;
+  }
+
+  .topics {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    a, p {
+      color: #424661;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    a {
+      &:hover {
+        filter: brightness(1.5);
+      }
+    }
+    p {
+      margin: 0 1rem;
+    }
+  }
+
+  p {
+    color: #424661;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+  

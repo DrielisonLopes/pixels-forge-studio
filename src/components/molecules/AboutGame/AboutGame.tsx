@@ -11,12 +11,9 @@ export default function AboutGame() {
   return (
     <div className={styles.gameContent}>
       <div className={styles.gameContainer}>
-        <h1>{ABOUT_GAME.title}</h1>
-        <p>{ABOUT_GAME.description}</p>
-        <Button className={style.mainButton}>Download</Button>
-        <Button className={`${style.mainButton} ${style.transparent}`}>
-          More info
-        </Button>
+        <h1>PLAY {ABOUT_GAME.title}</h1>
+        <p>Win cash + prizes.</p>
+        <Button className={style.mainButton}>Signup to Play</Button>
       </div>
     </div>
   );

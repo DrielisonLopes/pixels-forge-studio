@@ -1,12 +1,19 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  max-width: 1300px;
+  max-width: 1260px;
+  width: 100%;
   margin: auto;
 
   .logo {
+    height: auto;
+    width: 70px;
     filter: brightness(1.1);
   }
 
@@ -19,11 +26,10 @@
     div {
       display: flex;
       align-items: center;
-      background: #494949;
       height: 100%;
       margin: 0 4px;
       padding: 6px 22px;
-      border-radius: 4px;
+      border-radius: 50px;
       cursor: pointer;
       transition: background ease 0.3s, border ease 0.3s;
 
@@ -38,16 +44,15 @@
   }
 
   .rain {
-    background: transparent !important;
+    background: transparent;
     color: white;
     font-weight: 400;
     padding: 4px 22px;
-    border: 2px solid #b700ff;
+    border: 1px solid #fff;
     transition: background ease 0.3s, border ease 0.3s;
 
     &:hover {
       background: #562684;
-      border: 2px solid #562684;
     }
   }
 
@@ -64,18 +69,5 @@
     .userIcon {
       font-size: 20px;
     }
-  }
-}
-
-.ImageContainer {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to bottom, transparent, black);
-    opacity: 0.8;
   }
 }

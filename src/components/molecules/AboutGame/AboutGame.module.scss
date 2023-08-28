@@ -1,22 +1,52 @@
 @import "@/variables";
 
 .gameContent {
-  position: relative;
-  padding: 0 10px;
-  max-width: 1300px;
-  margin: auto;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1.5rem 0px;
+  text-align: center;
+  
+  & {
+    @media (min-width: 900px) {
+      margin: 5rem 0px;
+      padding-top: 6rem;
+    }
+}
 
   .gameContainer {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 50%;
-    margin: 350px 10px 50px;
-    padding: 10px;
-    color: rgba(255, 255, 255, 0.9);
+    h1 {
+      color: rgb(225, 226, 229);
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      line-height: 2rem;
 
-    @media (max-width: $screen-lg) {
-      width: 95%;
-      padding: 100px 10px 50px;
+      @media (min-width: 900px) {
+        font-size: 3rem;
+        line-height: 2.5rem;
+        line-height: 0.5;
+        padding: 1rem;
+      }
+    }
+    p {
+      margin: 0px;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      line-height: 2rem;
+      color: rgb(249, 166, 251);
+      padding: 0px 0px 2rem;
+
+      @media (min-width: 900px) {
+        font-size: 3rem;
+        line-height: 2.5rem; 
+      }
     }
   }
 }

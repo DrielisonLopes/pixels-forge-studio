@@ -2,10 +2,16 @@ import "../styles/main.module.scss";
 import styles from "../styles/_home.module.scss";
 
 import type { Metadata } from "next";
-import { Monda } from "next/font/google";
+import { Monda, Outfit } from "next/font/google";
 
 const monda = Monda({
   weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+});
+
+const outfit = Outfit({
+  weight: ["700"],
   style: ["normal"],
   subsets: ["latin"],
 });
@@ -22,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${monda.className} ${styles.mainContainer}`}>
+      <body className={`${outfit.className} ${styles.mainContainer}`}>
         {children}
       </body>
     </html>

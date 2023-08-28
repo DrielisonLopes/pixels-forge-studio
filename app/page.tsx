@@ -1,27 +1,19 @@
 "use client";
 
-import Image from "next/image";
-
-import Header from "@/molecules/Header/Header";
-import AboutGame from "@/molecules/AboutGame/AboutGame";
+import BackgroundHeader from "@/molecules/BackgroundHeader/BackgroundHeader";
 import GameList from "@/molecules/GameList/GameList";
-import Footer from "@/atoms/Footer";
+import Footer from "@/molecules/Footer/Footer";
+
 import styles from "../styles/_home.module.scss";
+import CardGame from "@/molecules/CardGame/CardGame";
 
 export default function HomePage() {
   return (
     <div className={styles.pageContainer}>
-      <div>
-        <Header />
-      </div>
       <div className={styles.imageContainer}>
-        <Image
-          src="/images/banner.jpg"
-          alt="Background Tank Game"
-          layout="fill"
-        />
-        <AboutGame />
+        <BackgroundHeader/>
       </div>
+      <CardGame/>
       <GameList />
       <Footer />
     </div>
