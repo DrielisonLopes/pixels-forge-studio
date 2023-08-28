@@ -1,4 +1,4 @@
-@import "@/variables";
+@import "../../../../styles/_variables.module";
 
 .gameContent {
   position: absolute;
@@ -11,19 +11,19 @@
   align-items: center;
   padding: 6rem 1.5rem 0px;
   text-align: center;
-  
+
   & {
     @media (min-width: 900px) {
       margin: 5rem 0px;
       padding-top: 6rem;
     }
-}
+  }
 
   .gameContainer {
     h1 {
       color: rgb(225, 226, 229);
       font-weight: 700;
-      font-family: 'Outfit', sans-serif;
+      font-family: "Outfit", sans-serif;
       font-size: 1.75rem;
       line-height: 2rem;
 
@@ -37,7 +37,7 @@
     p {
       margin: 0px;
       font-weight: 700;
-      font-family: 'Outfit', sans-serif;
+      font-family: "Outfit", sans-serif;
       font-size: 1.75rem;
       line-height: 2rem;
       color: rgb(249, 166, 251);
@@ -45,7 +45,7 @@
 
       @media (min-width: 900px) {
         font-size: 3rem;
-        line-height: 2.5rem; 
+        line-height: 2.5rem;
       }
     }
   }

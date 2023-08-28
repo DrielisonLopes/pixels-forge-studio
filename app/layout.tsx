@@ -1,4 +1,3 @@
-import "../styles/main.module.scss";
 import styles from "../styles/_home.module.scss";
 
 import type { Metadata } from "next";

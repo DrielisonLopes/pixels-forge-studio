@@ -1,6 +1,6 @@
-@import "@/variables";
+@import "../../../../styles/_variables.module";
 
-.gameList { 
+.gameList {
   position: relative;
   max-width: 1300px;
   padding: 0 10px;
@@ -13,7 +13,7 @@
 
   .gameImages {
     display: flex;
-  
+
     div {
       display: flex;
       justify-content: center;
@@ -21,27 +21,26 @@
       margin: 0 5px;
       border-radius: 4px;
       overflow: hidden;
-  
+
       transform: scale(1);
-      transition: transform .25s linear;
-  
+      transition: transform 0.25s linear;
+
       &:hover {
         transform: scale(1.05);
       }
     }
-  
+
     img {
       width: auto;
       margin: 0 5px;
       border-radius: 4px;
       cursor: pointer;
     }
-  
+
     &.comingSoon {
-      
-    @media (max-width: $screen-sm) {
-      display: block;
-    }
+      @media (max-width: $screen-sm) {
+        display: block;
+      }
       img {
         width: 50%;
         height: auto;
@@ -59,19 +58,20 @@
         padding: 0 36px;
 
         @media (max-width: $screen-md) {
-        padding: 0 20px;
-        width: 90%;
+          padding: 0 20px;
+          width: 90%;
         }
 
         h2 {
           margin-top: 0;
         }
-  
+
         button {
           width: 160px;
-          font-weight: 600; transform: scale(1);
-          transition: transform .25s linear;
-      
+          font-weight: 600;
+          transform: scale(1);
+          transition: transform 0.25s linear;
+
           &:hover {
             transform: scale(1.05);
           }
@@ -79,4 +79,4 @@
       }
     }
   }
-} 
+}
