@@ -11,9 +11,9 @@ export default function HomePage() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.imageContainer}>
-        <BackgroundHeader/>
+        <BackgroundHeader />
       </div>
-      <CardGame/>
+      <CardGame />
       <GameList />
       <Footer />
     </div>

@@ -1,18 +1,11 @@
 import styles from "../styles/_home.module.scss";
 
 import type { Metadata } from "next";
-import { Monda, Outfit } from "next/font/google";
+import { Outfit } from "next/font/google";
 import Head from "next/head";
-
-const monda = Monda({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 
 const outfit = Outfit({
   weight: ["700"],
-  style: ["normal"],
   subsets: ["latin"],
 });
 
