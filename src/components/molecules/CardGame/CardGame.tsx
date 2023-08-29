@@ -33,7 +33,7 @@ const CardGame: React.FC = (): ReactNode => {
                   <span><PiGameControllerFill/></span>Solo
                 </div>
                 <h3>Battletoads & Double Dragon</h3>
-                <hr />
+                
                 <div className={styles.descriptionPrice}>
                   <div className={styles.pricePool}>
                     <p>Prize Pool</p>

@@ -1,8 +1,8 @@
 @import "../../../../styles/_variables.module";
 
 .mainButton {
-  background: #5966f5;
-  color: white;
+  background: #96ccff;
+  color: #003353;
   font-size: 1rem;
   font-weight: 600;
   padding: 16px 24px;
@@ -16,6 +16,7 @@
 
   &:hover {
     background: $main-color-dark;
+    color: #fff;
   }
 
   &.transparent {
