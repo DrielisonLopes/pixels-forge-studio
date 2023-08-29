@@ -1,0 +1,30 @@
+@import "../../../../styles/_variables.module";
+
+.gameImages {
+  position: relative; // Para posicionar os botões corretamente
+  // ... (restante do seu código)
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.25s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+}

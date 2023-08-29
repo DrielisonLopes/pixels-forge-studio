@@ -8,13 +8,16 @@ import styles from "./Header.module.scss";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Image
+      <div className={styles.logo}>
+        <Image
         src="/images/pfs-logo.png"
-        className={styles.logo}
+        className={styles.logoImage}
         alt="Pixels Forge Studio Logo"
         width={100}
         height={100}
-      />
+        />
+        <h3>Pixel Forge Studio</h3>
+      </div>
         <div className={styles.nameIcon}>
         {/* <div className={styles.icon}>
           <LuSearch />

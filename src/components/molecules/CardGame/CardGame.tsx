@@ -12,7 +12,7 @@ interface GameContentProps {
 
 const CardGame: React.FC = (): ReactNode => {
   const cardImages = [
-    "/images/cityTank/city-tank1.png",
+    "/images/fate-samurai-remnant.jpg",
     "/images/cityTank/city-tank1.png",
   ];
 
@@ -22,7 +22,7 @@ const CardGame: React.FC = (): ReactNode => {
 
       <div className={styles.cardGame} >
         {cardImages.map((image, index) => (
-           <a key="" href="/">
+           <a key="" href="/Game">
           <div className={styles.gameContainer} key={index}>
             <Image src={image} alt="Card Game Image" width={250} height={200} />
             <div className={styles.gameCompany}><span><PiGlobeSimpleFill/></span>PFS</div>

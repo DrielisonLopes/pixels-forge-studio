@@ -12,11 +12,16 @@
   margin: auto;
 
   .logo {
-    height: auto;
-    width: 70px;
-    filter: brightness(1.1);
+    display: flex;
+    
+    .logoImage {
+      height: auto;
+      width: 70px;
+      margin-right: 0.5rem;
+      filter: brightness(1.1);
+    }
   }
-
+    
   .nameIcon {
     display: flex;
     align-items: center;
