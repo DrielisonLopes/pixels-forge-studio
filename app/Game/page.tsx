@@ -1,19 +1,19 @@
 "use client";
 
-import BackgroundHeader from "@/molecules/BackgroundHeader/BackgroundHeader";
 import GameList from "@/molecules/GameList/GameList";
 import Footer from "@/molecules/Footer/Footer";
 
-import styles from "../styles/_home.module.scss";
+import styles from "../../styles/_home.module.scss";
 import CardGame from "@/molecules/CardGame/CardGame";
+import Header from "@/molecules/Header/Header";
 
-export default function HomePage() {
+export default function GamePage() {
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.imageContainer}>
-        <BackgroundHeader />
-      </div>
-      <CardGame />
+      <Header/>
+      <br />
+      <br />
+      <br />
       <GameList />
       <Footer />
     </div>

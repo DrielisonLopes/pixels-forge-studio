@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 
 import Image from "next/image";
 import Button from "@/atoms/mainButton/Button";
@@ -13,15 +13,17 @@ interface GameContentProps {
 const GameList: React.FC = (): ReactNode => {
 
   const tankImages = [
-    "/images/cityTank/city-tank2.png",
-    "/images/cityTank/city-tank1.png",
-    "/images/cityTank/city-tank3.png",
-    "/images/tank.jpg",
+    "/images/cityTank/tank-bg.jpg",
     "/images/tank2.jpeg",
+    "/images/cityTank/city-tank1.png",
+    "/images/cityTank/city-tank2.png",
+    // "/images/fate-samurai-remnant.jpg",
+    "/images/tank.jpg",
   ];
 
   return (
       <div className={styles.gameList}>
+        
         <h3 className={styles.listTitle} >FEATURED GAMES</h3>
         <div className={styles.gameImages}>
           {tankImages.map((image, index) => (
@@ -39,7 +41,7 @@ const GameList: React.FC = (): ReactNode => {
         <h3 className={styles.listTitle} >COMING SOON</h3>
         <div className={`${styles.gameImages} ${styles.comingSoon}`}>
           <Image
-            src="/images/cityTank/city-tank1.png"
+            src="/images/fate-samurai-remnant.jpg"
             alt="City Tank Game play Image"
             width={500}
             height={200}
@@ -50,7 +52,7 @@ const GameList: React.FC = (): ReactNode => {
           </aside>
         </div>
 
-        <h3 className={styles.listTitle} >RECOMMENDED FOR YOU</h3>
+        {/* <h3 className={styles.listTitle} >RECOMMENDED FOR YOU</h3>
         <div className={styles.gameImages} style={{ marginBottom: '60px' }}>
           {tankImages.map((image, index) => (
             <div key={index}>
@@ -62,7 +64,7 @@ const GameList: React.FC = (): ReactNode => {
             />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
   );
 }

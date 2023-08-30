@@ -3,9 +3,9 @@
   height: 500px;
   overflow: hidden;
 
-  video {
+  .banner {
     position: relative;
-
+    opacity: 0.3;
     @media (min-width: 576px) {
       width: 100%;
     }

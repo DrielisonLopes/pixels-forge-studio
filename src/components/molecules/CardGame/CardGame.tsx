@@ -2,54 +2,71 @@ import React, { ReactNode } from "react";
 
 import Image from "next/image";
 import Button from "@/atoms/mainButton/Button";
+import {
+  PiGlobeSimpleFill,
+  PiGameControllerFill,
+  PiCurrencyCircleDollarFill,
+  PiHammerFill,
+} from "react-icons/pi";
 
 import styles from "./CardGame.module.scss";
+import { GAMES } from "@/constants";
 
 interface GameContentProps {
   children: ReactNode;
 }
 
 const CardGame: React.FC = (): ReactNode => {
-  const cardImages = [
-    "/images/cityTank/city-tank2.png",
-    "/images/cityTank/city-tank1.png",
-  ];
-
   return (
-    <div className={styles.CardGame}>
-      <h3 className={styles.listTitle}>Choose your Challenges</h3>
+    <div className={styles.cardsGames}>
+      <h3 className={styles.cardTitle}>Games</h3>
 
-      <div className={styles.gameImages} style={{ marginBottom: "60px" }}>
-        {cardImages.map((image, index) => (
-          // <a key="" href="/">
-          // eslint-disable-next-line react/jsx-key
-          <div className={styles.cardCard} key={index}>
-            <Image src={image} alt="Card Game Image" width={250} height={200} />
-            <div className="company">canto esquerdo</div>
-            <div className="cardContent">
-              <div className="title">Title</div>
-              <div className="gameDescription">
-                <div className="icon">
-                  <span>icon</span> solo
-                </div>
-                <h3>Nome do Jogo</h3>
-                <hr />
-                <div className="Price Entry">
-                  <div className="E1">
-                    <p>prize</p>
-                    <div>value</div>
+      <div className={styles.cardGame}>
+        {GAMES.map((game, index) => (
+          <a key="" href="/Game">
+            <div className={styles.gameContainer} key={index}>
+              <img src={game.imageUrl} alt={game.name} />
+              <div className={styles.gameCompany}>
+                <span>
+                  <PiGlobeSimpleFill />
+                </span>
+                PFS
+              </div>
+              <div className={styles.gameTitle}>{game.name}</div>
+              <div className={styles.gameContent}>
+                <div className={styles.contentDescription}>
+                  <div className={styles.descriptionIcon}>
+                    <span>
+                      <PiGameControllerFill />
+                    </span>
+                    {game.category}
                   </div>
-                  <div className="E2">
-                    <p>
-                      <span>icon</span> Entry
-                    </p>
-                    <div>value value</div>
+                  <h3>Battletoads & Double Dragon</h3>
+
+                  <div className={styles.descriptionPrice}>
+                    <div className={styles.pricePool}>
+                      <p>Prize Pool</p>
+                      <div>
+                        <span>
+                          <PiCurrencyCircleDollarFill />
+                        </span>
+                        9.99
+                      </div>
+                    </div>
+                    <div className={styles.priceEntry}>
+                      <p>Entry</p>
+                      <div>
+                        <span>
+                          <PiHammerFill />
+                        </span>
+                        Free
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          // </a>
+          </a>
         ))}
       </div>
     </div>

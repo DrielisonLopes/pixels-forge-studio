@@ -11,8 +11,8 @@ export default function AboutGame() {
   return (
     <div className={styles.gameContent}>
       <div className={styles.gameContainer}>
-        <h1>PLAY {ABOUT_GAME.title}</h1>
-        <p>Win cash + prizes.</p>
+        <h1>Awesome Gameplay</h1>
+        <p>From Gamers to Gamers</p>
         <Button className={style.mainButton}>Signup to Play</Button>
       </div>
     </div>

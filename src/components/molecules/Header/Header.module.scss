@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  top: 0;
+  top: 1.5rem;
   left: 50%;
   transform: translate(-50%);
   display: flex;
@@ -12,9 +12,19 @@
   margin: auto;
 
   .logo {
-    height: auto;
-    width: 70px;
-    filter: brightness(1.1);
+    display: flex;
+
+    .logoImage {
+      height: auto;
+      width: 70px;
+      margin-right: 1rem;
+      filter: grayscale(100%) brightness(160%) sepia(3%);
+    }
+
+    .logoName {
+      width: 150px;
+      filter: grayscale(100%) brightness(160%) sepia(3%);
+    }
   }
 
   .nameIcon {
