@@ -1,6 +1,8 @@
+@import "./_variables.module";
+
 .mainContainer {
   background: #191c1e !important;
-  color: white;
+  color: $white-color;
   padding: 0;
   margin: 0;
 }

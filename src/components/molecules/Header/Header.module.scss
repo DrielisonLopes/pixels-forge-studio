@@ -1,12 +1,13 @@
+@import "../../../../styles/_variables.module";
+
 .header {
   position: absolute;
-  top: 1.5rem;
+  top: 1rem;
   left: 50%;
   transform: translate(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
   max-width: 1260px;
   width: 100%;
   margin: auto;
@@ -17,13 +18,22 @@
     .logoImage {
       height: auto;
       width: 70px;
-      margin-right: 1rem;
+      margin: 0 1rem;
       filter: grayscale(100%) brightness(160%) sepia(3%);
+
+      @media (max-width: $screen-sm) {
+        width: 50px;
+      }
     }
 
     .logoName {
       width: 150px;
       filter: grayscale(100%) brightness(160%) sepia(3%);
+
+      @media (max-width: $screen-sm) {
+        height: auto;
+        width: 90px;
+      }
     }
   }
 
@@ -31,14 +41,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px;
 
     div {
       display: flex;
+      justify-content: center;
       align-items: center;
       height: 100%;
-      margin: 0 4px;
-      padding: 6px 22px;
+      padding: 12px 22px;
       border-radius: 50px;
       cursor: pointer;
       transition: background ease 0.3s, border ease 0.3s;
@@ -47,37 +56,36 @@
         background: #562684;
       }
     }
-  }
-  .icon {
-    padding: 6px 12px;
-    font-size: 18px;
-  }
 
-  .rain {
-    background: transparent;
-    color: white;
-    font-weight: 400;
-    padding: 4px 22px;
-    border: 1px solid #fff;
-    transition: background ease 0.3s, border ease 0.3s;
+    .user {
 
-    &:hover {
-      background: #562684;
+      @media (max-width: $screen-sm) {
+        padding: 0 !important;
+      }
+  
+      span {
+        padding: 2px;
+      }
+  
+      .userIcon {
+        font-size: 20px;
+        margin-right: 0.25rem;
+        line-height: 0.6;
+  
+        & + span {
+          @media (max-width: $screen-sm) {
+            display: none;
+          }
+        }
+      }
     }
-  }
-
-  .user {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0;
-    line-height: 0;
-
-    span {
-      padding: 2px;
-    }
-
-    .userIcon {
-      font-size: 20px;
+    .rain {
+      margin: 0 1rem;
+      height: 22px;
+      border: 1px solid $white-color;
+      @media (max-width: $screen-sm) {
+        margin-left: 0.5rem;
+      }
     }
   }
 }

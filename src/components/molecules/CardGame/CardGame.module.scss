@@ -7,7 +7,7 @@
   .cardTitle {
     font-size: 3rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: $screen-lg) {
       font-size: 2rem;
       text-align: center;
     }
@@ -31,7 +31,7 @@
       transform: scale(1);
       transition: transform 0.25s linear;
 
-      @media (max-width: 768px) {
+      @media (max-width: $screen-md) {
         max-width: 90%;
         flex-basis: 90%;
       }
@@ -76,6 +76,11 @@
           transform: translate(-50%);
           width: 100%;
           border-radius: 1rem 1rem 0 0;
+
+          @media (max-width: 450px) {
+            width: auto;
+            height: 282px;
+          }
         }
 
         .gameCompany {
@@ -105,7 +110,7 @@
           padding: 1.5rem;
           z-index: 1;
 
-          @media (max-width: 768px) {
+          @media (max-width: $screen-md) {
             top: 204px;
             font-size: 1.8rem;
           }

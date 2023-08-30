@@ -1,3 +1,5 @@
+@import "../../../../styles/_variables.module";
+
 .container {
   background: #191c1e;
   text-align: center;
@@ -17,7 +19,7 @@
 
     a,
     p {
-      color: #424661;
+      color: $blue-dark-color;
       font-weight: 700;
       text-decoration: none;
     }
@@ -32,7 +34,7 @@
   }
 
   p {
-    color: #424661;
+    color: $blue-dark-color;
     font-size: 14px;
     margin-bottom: 0;
   }
