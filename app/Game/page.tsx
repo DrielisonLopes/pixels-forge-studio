@@ -10,10 +10,9 @@ import styles from "../../styles/_home.module.scss";
 export default function GamePage() {
   const images = [
     "/images/thumb-video.png",
-    "/images/cityTank/tank-bg.jpg",
     "/images/tank2.jpeg",
     "/images/cityTank/city-tank1.png",
-    "/images/cityTank/city-tank2.png",
+    "/images/tank.jpg",
     "/images/fate-samurai-remnant.jpg",
     "/images/tank.jpg",
   ];
