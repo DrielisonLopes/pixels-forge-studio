@@ -25,19 +25,13 @@ const Header = () => {
         />
       </div>
       <div className={styles.nameIcon}>
-        {/* <div className={styles.icon}>
-          <LuSearch />
-        </div> */}
         <div className={styles.user}>
           <span className={styles.userIcon}>
             <PiUserCircleFill />
           </span>
-          <span>Sign In</span>
-          {/* <span>
-            <PiCaretDownBold />
-          </span> */}
+          <span>Login</span>
         </div>
-        <div className={styles.rain}>Create an Account</div>
+        <div className={styles.rain}>Sign up</div>
       </div>
     </div>
   );
