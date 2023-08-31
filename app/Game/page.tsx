@@ -1,11 +1,11 @@
 "use client";
 
+import Header from "@/molecules/Header/Header";
+import ImageCarousel from "@/molecules/ImageCarousel/ImageCarousel";
 import GameList from "@/molecules/GameList/GameList";
 import Footer from "@/molecules/Footer/Footer";
 
 import styles from "../../styles/_home.module.scss";
-import ImageCarousel from "@/molecules/ImageCarousel/ImageCarousel";
-import Header from "@/molecules/Header/Header";
 
 export default function GamePage() {
   const images = [
@@ -19,10 +19,12 @@ export default function GamePage() {
   ];
 
   return (
-    <div className={styles.pageContainer}>
-      <Header/>
-      <ImageCarousel images={images} />
-      <Footer />
+    <div>
+      <div className={styles.pageContainer}>
+        <Header/>
+        <ImageCarousel images={images} />
+      </div>
+        <Footer />
     </div>
   );
 }

@@ -2,8 +2,8 @@
 
 .gameList {
   position: relative;
-  max-width: 1300px;
-  padding: 0 10px;
+  max-width: 1140px;
+  padding: 0 12px;
   margin: 60px auto 80px;
 
   .listTitle {
@@ -70,6 +70,7 @@
         height: auto;
         @media (max-width: $screen-sm) {
           width: 100%;
+          margin: 0;
         }
       }
       aside {

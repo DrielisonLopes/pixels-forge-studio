@@ -1,16 +1,16 @@
 @import "../../../../styles/_variables.module";
 
 .header {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translate(-50%);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1260px;
-  width: 100%;
-  margin: auto;
+  max-width: 1140px;
+  margin: 1rem auto 0;
+  
+  @media (max-width: $screen-md) {
+    padding: 0 12px;
+  }
 
   .logo {
     display: flex;
@@ -18,7 +18,7 @@
     .logoImage {
       height: auto;
       width: 70px;
-      margin: 0 1rem;
+      margin: 0 1rem 0 0;
       filter: grayscale(100%) brightness(160%) sepia(3%);
 
       @media (max-width: $screen-sm) {
@@ -80,7 +80,7 @@
       }
     }
     .rain {
-      margin: 0 1rem;
+      margin: 0 0 0 1rem;
       height: 22px;
       border: 1px solid $white-color;
       @media (max-width: $screen-sm) {
