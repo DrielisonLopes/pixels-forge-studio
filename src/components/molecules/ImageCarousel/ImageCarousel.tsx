@@ -10,6 +10,16 @@ const ImageCarousel = ({ images }) => {
     setSelectedImageIndex(index);
   };
 
+  const handleNextImage = () => {
+    const newIndex = (selectedImageIndex + 1) % images.length;
+    setSelectedImageIndex(newIndex);
+  };
+
+  const handlePreviousImage = () => {
+    const newIndex = (selectedImageIndex - 1 + images.length) % images.length;
+    setSelectedImageIndex(newIndex);
+  };
+
   return (
     <>
     <h1 className={styles.gameTitle}>City Tank</h1>
@@ -26,20 +36,26 @@ const ImageCarousel = ({ images }) => {
               alt={`Image ${selectedImageIndex}`}
             />
           )}
-          <img src={images[selectedImageIndex]} alt={`Image ${selectedImageIndex}`} />
+          {selectedImageIndex === 0 && (
+            <img
+              src={images[selectedImageIndex]}
+              alt={`Image ${selectedImageIndex}`}
+            />
+          )}        
         </div>
         <div className={styles.thumbnailCarousel}>
-          
+          <button className={styles.prev} onClick={handlePreviousImage}>&lt;</button>
           {images.map((image, index) => (
-            <div key={index} >
+            <div key={index}>
               <img
                 src={image}
                 alt={`Image ${index}`}
-                className={`${styles.thumbnail} ${index === selectedImageIndex ? 'selected' : ''}`}
+                className={`${styles.thumbnail} ${index === selectedImageIndex ? styles.selected : ''}`}
                 onClick={() => handleImageClick(index)}
-                />
+              />
             </div>
           ))}
+          <button className={styles.next} onClick={handleNextImage}>&gt;</button>
         </div>
       </div>
 
@@ -50,21 +66,21 @@ const ImageCarousel = ({ images }) => {
             <h3>Highest Total Kills</h3>
           </div>
           <div className={styles.infoSubtitle}>
-            <p>Objective</p>
-            <p>Objective</p>
+            <p>Games Counted (after joining)</p>
+            <p>Up To Best 100 Winning Games</p>
           </div>
           <div className={styles.infoDescription}>
-            <p>Objective</p>
-            <p>Objective</p>
+            <p>Queue</p>
+            <p>ARAM</p>
           </div>
           <div className={styles.infoPoints}>
-            <p>Objective</p>
-            <p>Objective</p>
+            <p>Owner</p>
+            <p>Pixel Forge Studio</p>
           </div>
           <div className={styles.infoSubmit}>
             <div><h3>Prize Pool</h3></div>
-            <div>
-              <p>Boost</p>
+            <div className={styles.buttonJoin}>
+              <p>Boost the prize pool!</p>
               <button>JOIN Now</button>
             </div>
             <div><p>Entry <span>FREE</span></p></div>

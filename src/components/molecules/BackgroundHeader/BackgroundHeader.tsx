@@ -12,7 +12,9 @@ export default function BackgroundHeader() {
         src="images/mobile-legends.jpg"
         alt="Fate Samurai Remnant"
       />
-      <Header />
+      <div className={styles.nav}>
+        <Header />
+      </div>
       <AboutGame />
     </div>
   );

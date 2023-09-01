@@ -9,6 +9,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
+        <a href="/">
         <Image
           src="/images/logo2.png"
           className={styles.logoImage}
@@ -23,6 +24,7 @@ const Header = () => {
           width={150}
           height={55}
         />
+        </a>
       </div>
       <div className={styles.nameIcon}>
         <div className={styles.user}>

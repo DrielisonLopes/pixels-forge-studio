@@ -7,8 +7,36 @@
   margin: 0;
 }
 
+.pageContainer {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  
+  @media (min-width: $screen-md) {
+    padding: 0 12px;
+  }
+  @media (min-width: $screen-lg) {
+    max-width: 960px;
+  }
+  @media (min-width: $screen-xl) {
+    max-width: 1140px;
+  }
+}
+
 .imageContainer {
   display: flex;
   position: relative;
-  height: 100%;
+
+  @media (min-width: $screen-sm) {
+    height: 60vh;
+  }
+  @media (min-width: $screen-md) {
+    height: 70vh;
+  }
+  @media (min-width: 862px) {
+    height: 76vh;
+  }
+  @media (min-width: 950px) {
+    height: 100%;
+  }
 }
