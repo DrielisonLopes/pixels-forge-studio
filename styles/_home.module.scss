@@ -23,6 +23,22 @@
   }
 }
 
+.containerGame {
+  .nav {
+    position: fixed !important;
+    top: 0 !important;
+    background-color: #191c1e;    
+    max-width: 100% !important;
+    width: 100% !important;
+    border-bottom: 1px solid rgb(64, 72, 76);
+    z-index: 1;
+
+    & > div {
+      padding: 0 12px;
+    }
+  }
+}
+
 .imageContainer {
   display: flex;
   position: relative;

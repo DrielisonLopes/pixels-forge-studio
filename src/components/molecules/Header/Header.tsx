@@ -1,6 +1,4 @@
 import Image from "next/image";
-
-import { LuSearch } from "react-icons/lu";
 import { PiUserCircleFill, PiCaretDownBold } from "react-icons/pi";
 
 import styles from "./Header.module.scss";

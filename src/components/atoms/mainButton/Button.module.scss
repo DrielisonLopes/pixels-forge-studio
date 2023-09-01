@@ -12,18 +12,19 @@
   cursor: pointer;
   box-shadow: none;
 
-  transition: background ease 0.3s, border ease 0.3s;
+  transition: background-color ease 0.3s, border ease 0.3s;
 
   &:hover {
-    background: $main-color-dark;
-    color: $white-color;
+    background-color: #6ce8c1;
+    color: #003353;
   }
 
   &.transparent {
     background: none;
     cursor: pointer;
+    
     &:hover {
-      background: $main-color-dark;
+      background-color: #6ce8c1;
     }
   }
 }

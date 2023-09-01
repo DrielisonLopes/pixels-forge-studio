@@ -94,12 +94,6 @@
         button {
           width: 160px;
           font-weight: 600;
-          transform: scale(1);
-          transition: transform 0.25s linear;
-
-          &:hover {
-            transform: scale(1.02);
-          }
         }
       }
     }

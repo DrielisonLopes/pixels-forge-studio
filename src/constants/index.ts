@@ -14,6 +14,7 @@ export const GAMES: Game[] = [
     imageUrl: "/games/guildwars2.png",
     description: "",
     category: "MMORPG",
+    slug: "guild-wars-2",
   },
   {
     name: "Mobile Legends",
@@ -22,5 +23,6 @@ export const GAMES: Game[] = [
     imageUrl: "/games/mobile-legends.jpg",
     description: "",
     category: "MOBA 5v5",
+    slug: "mobile-legends",
   },
 ];
