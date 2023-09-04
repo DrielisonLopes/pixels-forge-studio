@@ -19,7 +19,7 @@ export default function GamePage() {
   return (
     <div>
       <div className={styles.containerGame}>
-        <BackgroundHeader />
+        <BackgroundHeader containerGameTitle={true} />
       </div>
       <ImageCarousel images={images} />
       <Footer />

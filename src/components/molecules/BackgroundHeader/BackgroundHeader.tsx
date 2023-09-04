@@ -6,7 +6,7 @@ import BackgroundContent from "@/molecules/BackgroundContent/BackgroundContent";
 import home from "../../../../styles/_home.module.scss"
 import styles from "./BackgroundHeader.module.scss";
 
-export default function BackgroundHeader() {
+export default function BackgroundHeader({ containerGameTitle }) {
   return (
     <div className={home.imageContainer}>
       <div className={styles.header}>
@@ -18,7 +18,7 @@ export default function BackgroundHeader() {
         <nav className={home.nav}>
           <Header />
         </nav>
-        <BackgroundContent />
+        <BackgroundContent containerGameTitle={containerGameTitle} />
       </div>
     </div>
   );

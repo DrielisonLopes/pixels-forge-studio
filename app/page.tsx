@@ -8,7 +8,7 @@ import Footer from "@/molecules/Footer/Footer";
 export default function HomePage() {
   return (
     <div>
-      <BackgroundHeader />
+      <BackgroundHeader containerGameTitle={false} />
       <CardGame />
       <GameList />
       <Footer />

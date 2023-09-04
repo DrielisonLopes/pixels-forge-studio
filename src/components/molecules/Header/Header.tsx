@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 import { PiUserCircleFill, PiCaretDownBold } from "react-icons/pi";
 
 import styles from "./Header.module.scss";
@@ -7,7 +8,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
-        <a href="/">
+        <Link href="/">
         <Image
           src="/images/logo2.png"
           className={styles.logoImage}
@@ -22,7 +23,7 @@ const Header = () => {
           width={150}
           height={55}
         />
-        </a>
+        </Link>
       </div>
       <div className={styles.nameIcon}>
         <div className={styles.user}>

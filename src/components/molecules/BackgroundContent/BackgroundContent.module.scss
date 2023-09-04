@@ -76,6 +76,10 @@
       @media (max-width: $screen-xl) {
         padding: 0 12px;
       }
+
+      a {
+        color: $white-color;
+      }
     }
   }
 }
