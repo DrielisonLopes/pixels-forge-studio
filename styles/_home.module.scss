@@ -37,6 +37,15 @@
       padding: 0 12px;
     }
   }
+
+  div > img:first-of-type {
+    position: relative;
+    top: -88px;
+    @media (min-width: $screen-lg) {
+      top: -250px;
+    }
+  }
+
 }
 
 .imageContainer {
