@@ -5,7 +5,7 @@
       "@/atoms/*": ["src/components/atoms/*"],
       "@/molecules/*": ["src/components/molecules/*"],
       "@/organisms/*": ["src/components/organisms/*"],
-      "@/services/*": ["src/services/*"],
+      "@/services/*": ["lib/services/*"],
       "@/lib/*": ["src/lib/*"],
       "@/constants": ["src/constants/index.ts"],
     },
@@ -29,6 +29,6 @@
     ],
     "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "lib/firebase.js"],
   "exclude": ["node_modules"]
 }
