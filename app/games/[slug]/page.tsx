@@ -8,20 +8,10 @@ import { GAMES } from "@/constants";
 import styles from "../../../styles/_home.module.scss";
 
 export default function GamePage() {
-  const images = [
-    "/images/cityTank/tank-play.png",
-    "/images/tank2.jpeg",
-    "/images/cityTank/city-tank1.png",
-    "/images/tank.jpg",
-    "/images/fate-samurai-remnant.jpg",
-    "/images/tank.jpg",
-  ];
-
 
   const currentUrl = window.location.href;
   const urlParts = currentUrl.split('/');
   const gameSlug = urlParts[urlParts.length - 1];
-  console.log(gameSlug)
 
   const game = GAMES.find((game) => game.slug === gameSlug);
   const backgroundImage = game ? game.imageUrl : null;
@@ -31,7 +21,7 @@ export default function GamePage() {
       <div className={styles.containerGame}>
         <BackgroundHeader containerGameTitle={true} backgroundImage={backgroundImage} />
       </div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={game ? game.images : []} />
       <Footer />
     </div>
   );

@@ -42,14 +42,13 @@
       img {
         max-width: 100%;
         height: auto;
-        border: 1px solid #ddd;
+        // border: 1px solid #ddd;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
       }
       .imageVideo {
         position: absolute;
         z-index: 0;
         top: 0;
-        top: -300px;
         left: 0;
       }
     }
@@ -216,7 +215,7 @@
     img {
       max-width: 100%;
       height: auto;
-      border: 1px solid #ddd;
+      // border: 1px solid #ddd;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
   }
