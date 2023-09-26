@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-import { GoogleAuthProvider, signInWithPopup, User } from 'firebase/auth';
+import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, User } from 'firebase/auth';
 import { auth } from '../../../../lib/firebase'
 
 import styles from './LoginModal.module.scss';
@@ -11,11 +11,23 @@ import { PiGoogleLogoBold, PiXBold } from "react-icons/pi";
 const LoginModal = ({ onClose }) => {
   
     const [user, setUser] = useState<User>({} as User);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     function signInWithGoogle() {
         const provider = new GoogleAuthProvider();
 
         signInWithPopup(auth, provider)
+            .then((result) => {
+                setUser(result.user);
+            }).catch((error) => {
+                console.log(error);
+            });
+    }
+
+    function signInWithEmail() {
+
+        signInWithEmailAndPassword(auth, email, password) 
             .then((result) => {
                 setUser(result.user);
             }).catch((error) => {
@@ -44,14 +56,24 @@ const LoginModal = ({ onClose }) => {
                     <p>or</p>
                     <form action="">
                     <div className={styles.input}>
-                            <label htmlFor="">Email*</label>
-                            <input type="text" />
+                            <label htmlFor="email">Email*</label>
+                            <input 
+                            type="text" 
+                            id="email" 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} // Atualiza o estado 'email' conforme o usuário digita
+                        />
                         </div>
                         <div className={styles.input}>
-                            <label htmlFor="">Password*</label>
-                            <input type="text" />
+                            <label htmlFor="password">Password*</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                value={password} 
+                                onChange={(e) => setPassword(e.target.value)} // Atualiza o estado 'password' conforme o usuário digita
+                            />
                         </div>
-                        <button className={styles.creat}>Create Account</button>
+                        <button type="button" onClick={signInWithEmail} className={styles.creat}>Create Account</button>
                         <div className={styles.terms}>
                             <div>
                                 <p>By signing up, you are agreeing to Pixel Forge Studio</p>
