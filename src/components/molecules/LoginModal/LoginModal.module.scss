@@ -185,3 +185,22 @@
     }
   }
 }
+
+.myUser {
+  display: flex;
+  align-items: center;
+  padding: 0 0 6px;
+
+  img {
+    border-radius: 16px;
+    width: 66px;
+    height: fit-content;
+    margin-right: 8px;
+  }
+
+  div {
+    h2 {
+      margin: 0;
+    }
+  }
+}

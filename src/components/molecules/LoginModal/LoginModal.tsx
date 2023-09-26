@@ -1,9 +1,28 @@
 import React from 'react';
-import styles from './LoginModal.module.scss';
+import { useState } from 'react';
 
+import { GoogleAuthProvider, signInWithPopup, User } from 'firebase/auth';
+import { auth } from '../../../../lib/firebase'
+
+import styles from './LoginModal.module.scss';
 import { PiGoogleLogoBold, PiXBold } from "react-icons/pi";
 
+
 const LoginModal = ({ onClose }) => {
+  
+    const [user, setUser] = useState<User>({} as User);
+
+    function signInWithGoogle() {
+        const provider = new GoogleAuthProvider();
+
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                setUser(result.user);
+            }).catch((error) => {
+                console.log(error);
+            });
+    }
+  
   return (
     <div className={styles.backgroundModal}>
         
@@ -14,7 +33,14 @@ const LoginModal = ({ onClose }) => {
             </div>
             <div className={styles.main}>
                 <div className={styles.container}>
-                    <button className={styles.siginButton}><PiGoogleLogoBold/> Sign Up with Google</button>
+                    <div  className={styles.myUser}>
+                        <img src={user.photoURL} />
+                        <div>
+                            <h2>{user.displayName}</h2>
+                            <small>{user.email}</small>
+                        </div>
+                    </div>
+                    <button type="button" onClick={signInWithGoogle} className={styles.siginButton}><PiGoogleLogoBold/> Sign Up with Google</button>
                     <p>or</p>
                     <form action="">
                     <div className={styles.input}>
