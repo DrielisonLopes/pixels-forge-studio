@@ -1,26 +1,28 @@
 import React from 'react';
 import styles from './LoginModal.module.scss';
 
+import { PiGoogleLogoBold, PiXBold } from "react-icons/pi";
+
 const LoginModal = ({ onClose }) => {
   return (
-    <div className={styles.background}>
+    <div className={styles.backgroundModal}>
         
         <div className={styles.modal}>
             <div className={styles.header}>
                 <h2>Sign Up</h2>
-                <button className={styles.onCLose} onClick={onClose}>X</button>
+                <button className={styles.onCLose} onClick={onClose}><PiXBold/></button>
             </div>
             <div className={styles.main}>
                 <div className={styles.container}>
-                    <button className={styles.siginButton}><span>G </span>Sign Up with Google</button>
+                    <button className={styles.siginButton}><PiGoogleLogoBold/> Sign Up with Google</button>
                     <p>or</p>
                     <form action="">
                     <div className={styles.input}>
-                            <label htmlFor="">Email</label>
+                            <label htmlFor="">Email*</label>
                             <input type="text" />
                         </div>
                         <div className={styles.input}>
-                            <label htmlFor="">Password</label>
+                            <label htmlFor="">Password*</label>
                             <input type="text" />
                         </div>
                         <button className={styles.creat}>Create Account</button>
