@@ -71,7 +71,7 @@
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          background-color: rgb(58, 72, 87) !important;
+          background-color: rgb(58, 72, 87);
           border: 0px;
           min-width: 64px;
           width: 100%;
@@ -83,6 +83,11 @@
           column-gap: 0.5rem;
           color: rgb(213, 228, 247);
           text-transform: uppercase;
+          transition: background-color ease .3s;
+
+          &:hover {
+            background-color: rgb(85, 95, 112)
+          }
 
           svg {
             font-size: 1.6rem;
@@ -179,6 +184,11 @@
               color: rgb(150, 204, 255);
               margin-left: 4px;
             }
+          }
+          .forgotPassword {
+            color: rgb(150, 204, 255);
+            align-self: center;
+            text-decoration: none;
           }
         }
       }

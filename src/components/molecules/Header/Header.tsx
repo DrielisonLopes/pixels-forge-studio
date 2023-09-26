@@ -2,16 +2,18 @@ import Image from "next/image";
 import Link from 'next/link';
 import { useState } from "react";
 import { PiUserCircleFill } from "react-icons/pi";
-import LoginModal from "../LoginModal/LoginModal";
+import { LoginModal } from "../LoginModal/LoginModal";
 
 import styles from "./Header.module.scss";
 
 const Header = () => {
   
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(false);
 
-  const handleLoginClick = () => {
+  const handleLoginClick = (registering) => {
     setIsModalOpen(true);
+    setIsRegistering(registering);
   };
 
   const handleCloseModal = () => {
@@ -39,15 +41,15 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.nameIcon}>
-        <div className={styles.user} onClick={handleLoginClick}>
+      <div className={styles.user} onClick={() => handleLoginClick(false)}>
           <span className={styles.userIcon}>
             <PiUserCircleFill />
           </span>
           <span>Login</span>
         </div>
-        <div className={styles.rain} onClick={handleLoginClick}>Sign up</div>
+        <div className={styles.rain} onClick={() => handleLoginClick(true)}>Sign up</div>
       </div>
-      {isModalOpen && <LoginModal onClose={handleCloseModal} />}
+      {isModalOpen && <LoginModal isRegistering={isRegistering} setIsRegistering={setIsRegistering} onClose={handleCloseModal} />}
     </div>
   );
 };

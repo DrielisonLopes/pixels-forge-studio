@@ -4,26 +4,22 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthP
 import { auth } from '../../../../lib/firebase';
 import styles from './LoginModal.module.scss';
 import { PiGoogleLogoBold, PiXBold } from "react-icons/pi";
-import Image from 'next/image';
 
-export const LoginModal = ({ onClose }) => {
+
+interface LoginModalProps {
+    onClose: () => void;
+    isRegistering: boolean;
+    setIsRegistering: (registering: boolean) => void;
+}
+
+export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, setIsRegistering }) => {
 
     const [user, setUser] = useState<User>({} as User);
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isRegistering, setIsRegistering] = useState(false);
 
-    function signInWithGoogle() {
-        const provider = new GoogleAuthProvider();
-
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                setUser(result.user);
-            }).catch((error) => {
-                console.log(error);
-            });
-    }
-
+    // Register
     function handleAuthentication() {
         if (isRegistering) {
             createUserWithEmailAndPassword(auth, email, password)
@@ -42,18 +38,41 @@ export const LoginModal = ({ onClose }) => {
         }
     }
 
+    // Login with Google
+    function signInWithGoogle() {
+        const provider = new GoogleAuthProvider();
+
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                setUser(result.user);
+            }).catch((error) => {
+                console.log(error);
+            });
+    }
+
+    // Logout
+    function signout() {
+        auth.signOut()
+        .then(() => {
+            setUser({}); 
+        })
+        .catch((error) => {
+            console.error('Erro ao fazer logout:', error);
+        });
+    }
+
     return (
         <div className={styles.backgroundModal}>
 
             <div className={styles.modal}>
                 <div className={styles.header}>
-                    <h2>Sign Up</h2>
+                    <h2>{isRegistering ? 'Sign Up' : 'Login'}</h2>
                     <button className={styles.onCLose} onClick={onClose}><PiXBold /></button>
                 </div>
                 <div className={styles.main}>
                     <div className={styles.container}>
                         <div className={styles.myUser}>
-                            {user.photoURL && <Image src={user.photoURL} alt="User photo" />}
+                            {user.photoURL && <img src={user.photoURL} alt="User photo" />}
                             <div>
                                 <h2>{user.displayName}</h2>
                                 <small>{user.email}</small>
@@ -117,7 +136,17 @@ export const LoginModal = ({ onClose }) => {
                                         </a>
                                     </>}
                             </div>
+                            {isRegistering ?
+                            ''
+                            :
+                            <a href="#" className={styles.forgotPassword}>
+                                Forgot Password?
+                            </a>
+                            }
                         </form>
+                        {/* Temporary */}
+                        <br />
+                        <button onClick={signout}>SIGN OUT</button>
                     </div>
                 </div>
             </div>
