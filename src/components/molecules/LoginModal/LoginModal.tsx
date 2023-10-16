@@ -1,6 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, User } from 'firebase/auth';
+import { 
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    onAuthStateChanged,
+    User
+} from 'firebase/auth';
 import { auth } from '../../../../lib/firebase';
 import styles from './LoginModal.module.scss';
 import { PiGoogleLogoBold, PiXBold } from "react-icons/pi";
@@ -18,8 +25,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, 
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    // Register
+   
+    // Register or Login Email
     function handleAuthentication() {
         if (isRegistering) {
             createUserWithEmailAndPassword(auth, email, password)
@@ -54,7 +61,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, 
     function signout() {
         auth.signOut()
         .then(() => {
-            setUser({}); 
+            setUser({} as any);
         })
         .catch((error) => {
             console.error('Erro ao fazer logout:', error);

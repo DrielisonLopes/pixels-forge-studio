@@ -21,15 +21,6 @@ const Carousel = ({ images }) => {
     showSlide(currentIndex + 1);
   };
 
-  const tankImages = [
-    "/images/cityTank/tank-bg.jpg",
-    "/images/tank2.jpeg",
-    "/images/cityTank/city-tank1.png",
-    "/images/cityTank/city-tank2.png",
-    "/images/fate-samurai-remnant.jpg",
-    "/images/tank.jpg",
-  ];
-
   return (
     <div className="carousel">
       <button className="carousel-btn prev-btn" onClick={prevSlide}>&#10094;</button>

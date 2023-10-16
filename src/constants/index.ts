@@ -6,6 +6,12 @@ export const ABOUT_GAME: AboutGame = {
     "In a peaceful village, invading machines take control of the city, spreading fear and oppression. However, a brave hero emerges, piloting a powerful tank, determined to fight against the machines and restore peace.",
 };
 
+export const DESCRIPTION_GAME: AboutGame = {
+  title: "Mobile Legends",
+  description:
+  "​Inject new Legendary Lords, Heroes, and Units into your games to vastly expand your methods of play on the campaign map and within battles. The Changeling, Yuan Bo, and Mother Ostankya each bring their own unique campaign mechanics to their races, ​ ​with goals separate from the Ursus storyline in the Realm of Chaos campaign, and new units to help them pursue victory on their terms. 3 new Legendary Lords emerge from the shadows. Enact malign schemes and trickery with the Changeling of Tzeentch. Establish and execute grand stratagems on a global scale as Yuan Bo of Grand Cathay. Conjure powerful hexes and incantations whilst engaging in witchcraft, flipping campaigns on their head as Mother Ostankya of Kislev.  Scatter magical spells far and wide with the Blue Scribes of Tzeentch; a new Legendary Hero.  ​Expand your roster with 12 additional overall units, and enhance your troops with 9 new Regiments of Renown.",
+};
+
 export const GAMES: Game[] = [
   {
     name: "Guild Wars 2",
@@ -40,5 +46,25 @@ export const GAMES: Game[] = [
     description: "",
     category: "MOBA 5v5",
     slug: "mobile-legends",
+  },
+];
+
+export const PIXEL_FORGE_GAMES: Game[] = [
+  {
+    name: "City Tank",
+    externalLink:
+      "https://www.anrdoezrs.net/click-100977185-13720593?url=https%3A%2F%2Fwww.mmoga.co.uk%[…]ld-Wars-Complete-Collection.html%3Fcjukpid%3D0&cjsku=1117783",
+    imageUrl: "/games/guildwars2.png",
+    images: [
+      "/images/cityTank/tank-bg.jpg",
+      "/images/tank2.jpeg",
+      "/images/cityTank/city-tank1.png",
+      "/images/cityTank/city-tank2.png",
+      "/images/fate-samurai-remnant.jpg",
+      "/images/tank.jpg",
+    ],
+    description: "",
+    category: "MMORPG",
+    slug: "guild-wars-2",
   },
 ];

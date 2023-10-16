@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
+import { DESCRIPTION_GAME } from "@/constants";
 
 import home from '../../../../styles/_home.module.scss';
 import styles from './ImageCarousel.module.scss';
@@ -100,16 +101,8 @@ const ImageCarousel = ({ images }) => {
       </div>
 
       <div className={styles.gameDescription}>
-        <h1>About City Tank</h1>
-        <p>
-          ​Inject new Legendary Lords, Heroes, and Units into your games to vastly expand your methods of play on the campaign map and within battles. The Changeling, Yuan Bo, and Mother Ostankya each bring their own unique campaign mechanics to their races, ​ ​with goals separate from the Ursus storyline in the Realm of Chaos campaign, and new units to help them pursue victory on their terms. 
-          3 new Legendary Lords emerge from the shadows.
-          Enact malign schemes and trickery with the Changeling of Tzeentch.
-          Establish and execute grand stratagems on a global scale as Yuan Bo of Grand Cathay.
-          Conjure powerful hexes and incantations whilst engaging in witchcraft, flipping campaigns on their head as Mother Ostankya of Kislev. 
-          Scatter magical spells far and wide with the Blue Scribes of Tzeentch; a new Legendary Hero. 
-          ​Expand your roster with 12 additional overall units, and enhance your troops with 9 new Regiments of Renown.
-        </p>
+        <h1>{DESCRIPTION_GAME.title}</h1>
+        <p>{DESCRIPTION_GAME.description}</p>
       </div>
     </div>
   );
