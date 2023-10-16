@@ -57,17 +57,6 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, 
             });
     }
 
-    // Logout
-    function signout() {
-        auth.signOut()
-        .then(() => {
-            setUser({} as any);
-        })
-        .catch((error) => {
-            console.error('Erro ao fazer logout:', error);
-        });
-    }
-
     return (
         <div className={styles.backgroundModal}>
 
@@ -153,7 +142,6 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, 
                         </form>
                         {/* Temporary */}
                         <br />
-                        <button onClick={signout}>SIGN OUT</button>
                     </div>
                 </div>
             </div>

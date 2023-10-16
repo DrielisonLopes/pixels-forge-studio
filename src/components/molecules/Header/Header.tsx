@@ -31,6 +31,17 @@ const Header = () => {
     setIsModalOpen(false);
   };
 
+  // Logout
+  function signout() {
+    auth.signOut()
+    .then(() => {
+        setUser(null as any);
+    })
+    .catch((error) => {
+        console.error('Erro ao fazer logout:', error);
+    });
+  }
+
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -54,7 +65,7 @@ const Header = () => {
       <div className={styles.nameIcon}>
         {user ? ( // Verifica se o usuário está autenticado
           <div>
-            <span>Olá, {user.displayName}</span>
+            <span onClick={signout}>Olá, {user.displayName} ➡️</span>
           </div>
         ) : (
           <>
