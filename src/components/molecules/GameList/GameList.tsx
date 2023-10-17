@@ -22,10 +22,10 @@ const GameList: React.FC = (): ReactNode => {
         
         <h3 className={styles.listTitle} >FEATURED GAMES</h3>
         <div className={styles.gameImages}>
-        {GAMES.slice(0, 4).map((game, index) => (
+        {GAMES.map((game, index) => (
           <Link key={index} href={`/games/${game.slug}`}>
             <Image
-              src={game.imageUrl}
+              src={game.thumbnail}
               alt={game.name}
               width={250}
               height={200}

@@ -8,7 +8,7 @@ import Footer from "@/molecules/Footer/Footer";
 export default function HomePage() {
   return (
     <div>
-      <BackgroundHeader containerGameTitle={false} backgroundImage="../images/mobile-legends.jpg" />
+      <BackgroundHeader containerGameTitle={false} backgroundImage="../games/mobile-legends-home-bg.webp" />
       <CardGame />
       <GameList />
       <Footer />

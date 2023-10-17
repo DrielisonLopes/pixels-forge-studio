@@ -10,7 +10,7 @@ import styles from "../../../styles/_home.module.scss";
 export default function GamePage({params}: {params: { slug: string }}) {
 
   const game = GAMES.find((game) => game.slug === params.slug);
-  const backgroundImage = game ? game.imageUrl : null;
+  const backgroundImage = game ? game.banner : null;
 
   return (
     <div>

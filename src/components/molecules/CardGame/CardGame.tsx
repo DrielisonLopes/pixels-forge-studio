@@ -26,7 +26,7 @@ const CardGame: React.FC = (): ReactNode => {
           {GAMES.slice(0, 4).map((game, index) => (
             <Link key={index} href={`/games/${game.slug}`}>
               <div className={styles.gameContainer} key={index}>
-                <img src={game.imageUrl} alt={game.name} />
+                <img src={game.thumbnail} alt={game.name} />
                 <div className={styles.gameCompany}>
                   <span>
                     <PiGlobeSimpleFill />

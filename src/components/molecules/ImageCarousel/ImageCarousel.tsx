@@ -35,7 +35,7 @@ const ImageCarousel = ({ images }) => {
 
             {selectedImageIndex === 0 ? (
               <video controls width="100%" height="100%">
-              <source src="https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2FCity%20Tank%20-%20Compress.mp4?alt=media&token=1381b297-7fe0-4267-ab1c-fcec688ea0b5" type="video/mp4" />
+              <source src="https://www.youtube.com/embed/cGZ4X7cER8k?si=iMqW4zDXjJot2xVf" type="video/mp4" />
               Seu navegador não suporta o elemento de vídeo.
             </video>
             ) : (

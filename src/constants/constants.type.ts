@@ -6,7 +6,8 @@ export interface AboutGame {
 export interface Game {
   name: string;
   externalLink: string;
-  imageUrl: string;
+  thumbnail: string;
+  banner: string;
   images: string[];
   description: string;
   category: string;
