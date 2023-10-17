@@ -14,6 +14,24 @@ export const DESCRIPTION_GAME: AboutGame = {
 
 export const GAMES: Game[] = [
   {
+    name: "City Tank",
+    externalLink:
+      "https://www.anrdoezrs.net/click-100977185-13720593?url=https%3A%2F%2Fwww.mmoga.co.uk%[…]ld-Wars-Complete-Collection.html%3Fcjukpid%3D0&cjsku=1117783",
+    thumbnail: "/games/city-tank-bg.png",
+    banner: "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg.png?alt=media&token=6104a05c-fd5f-4074-9217-7e8d33590c8f&_gl=1*1dv93lf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1NjgzNjUuNTcuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-2.png?alt=media&token=d9c2c006-3328-4484-b31b-2a5377d5346a&_gl=1*4yv37c*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTUuMjIuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-3.png?alt=media&token=b8172fae-d0e8-4d6f-b540-f5b0c10d6316&_gl=1*1lo0vkf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTguMTkuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg2.jpg?alt=media&token=c4b0b2ff-fb2e-4e9d-8eb3-26543c3ed812&_gl=1*x008bq*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDUuMTIuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-4.jpeg?alt=media&token=670f66a9-abab-4201-a003-0069da6a9d16&_gl=1*mwzxp1*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDEuMTYuMC4w",
+    ],
+    description: "",
+    category: "",
+    slug: "city-tank",
+  },
+  {
     name: "Guild Wars 2",
     externalLink:
       "https://www.anrdoezrs.net/click-100977185-13720593?url=https%3A%2F%2Fwww.mmoga.co.uk%[…]ld-Wars-Complete-Collection.html%3Fcjukpid%3D0&cjsku=1117783",
@@ -128,18 +146,18 @@ export const PIXEL_FORGE_GAMES: Game[] = [
     name: "City Tank",
     externalLink:
       "https://www.anrdoezrs.net/click-100977185-13720593?url=https%3A%2F%2Fwww.mmoga.co.uk%[…]ld-Wars-Complete-Collection.html%3Fcjukpid%3D0&cjsku=1117783",
-    thumbnail: "/games/guildwars2.png",
-    banner: "/games/guildwars2.png",
+    thumbnail: "/games/city-tank-bg.png",
+    banner: "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
     images: [
-      "/images/cityTank/tank-bg.jpg",
-      "/images/tank2.jpeg",
-      "/images/cityTank/city-tank1.png",
-      "/images/cityTank/city-tank2.png",
-      "/images/fate-samurai-remnant.jpg",
-      "/images/tank.jpg",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg.png?alt=media&token=6104a05c-fd5f-4074-9217-7e8d33590c8f&_gl=1*1dv93lf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1NjgzNjUuNTcuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-2.png?alt=media&token=d9c2c006-3328-4484-b31b-2a5377d5346a&_gl=1*4yv37c*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTUuMjIuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-3.png?alt=media&token=b8172fae-d0e8-4d6f-b540-f5b0c10d6316&_gl=1*1lo0vkf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTguMTkuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg2.jpg?alt=media&token=c4b0b2ff-fb2e-4e9d-8eb3-26543c3ed812&_gl=1*x008bq*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDUuMTIuMC4w",
+      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-4.jpeg?alt=media&token=670f66a9-abab-4201-a003-0069da6a9d16&_gl=1*mwzxp1*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDEuMTYuMC4w",
     ],
     description: "",
-    category: "MMORPG",
-    slug: "guild-wars-2",
+    category: "",
+    slug: "city-tank",
   },
 ];
