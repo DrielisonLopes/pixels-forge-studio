@@ -35,14 +35,21 @@
     }
 
     .mainShowContainer {
+      position: relative;
       overflow: hidden;
       max-height: 368px;
 
       img {
         max-width: 100%;
         height: auto;
-        border: 1px solid #ddd;
+        // border: 1px solid #ddd;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .imageVideo {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
       }
     }
 
@@ -54,14 +61,19 @@
       .prev, .next {
         position: absolute;
         top: 0px;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        color: $white-color;
         font-weight: 600;
-        width: 30px;
-        height: 100%;
-        padding: 0.5rem;
+        width: 26px;
+        height: 104px;
+        padding: 0 1px 0 0;
         border: none;
         border-radius: 0;
+
+        svg {
+          width: 24px;
+          height: auto;
+        }
       }
       .prev {
         left: 20px;
@@ -106,7 +118,7 @@
     .cardInfo {
       display: flex;
       flex-direction: column;
-      background: #1f212f;
+      background:  #2e3133;
       border-radius: 1rem;
 
       & > div {
@@ -140,8 +152,8 @@
           }
 
           button {
-            background-color: rgb(108, 232, 193);
-            color: rgb(0, 51, 83);
+            background-color: #6ce8c1;
+            color: #003353;
             font-weight: 600;
             padding: 0.75rem 1.5rem;
             min-width: 64px;
@@ -153,8 +165,7 @@
             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   
             &:hover {
-              background-color: rgb(103, 220, 183);
-              background-color: rgb(142, 190, 244);
+              background-color: #8ebef4;
             }
           }
         }
@@ -204,7 +215,7 @@
     img {
       max-width: 100%;
       height: auto;
-      border: 1px solid #ddd;
+      // border: 1px solid #ddd;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
   }

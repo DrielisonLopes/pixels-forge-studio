@@ -38,7 +38,7 @@
 
       &:hover {
         filter: brightness(1.1);
-        transform: scale(1.01);
+        // transform: scale(1.01);
       }
 
       .gameContainer {
@@ -74,7 +74,7 @@
           top: 0;
           left: 50%;
           transform: translate(-50%);
-          width: 100%;
+          width: 101%;
           border-radius: 1rem 1rem 0 0;
 
           @media (max-width: 450px) {

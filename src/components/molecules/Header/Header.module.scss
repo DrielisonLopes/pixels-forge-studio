@@ -50,10 +50,11 @@
       padding: 12px 22px;
       border-radius: 50px;
       cursor: pointer;
-      transition: background ease 0.3s, border ease 0.3s;
+      transition: background-color ease 0.3s, border ease 0.3s;
 
       &:hover {
-        background: #562684;
+        background-color: #8ebef4;
+        color: #003353;
       }
     }
 

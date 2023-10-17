@@ -1,15 +1,27 @@
 import Image from "next/image";
-
-import { LuSearch } from "react-icons/lu";
-import { PiUserCircleFill, PiCaretDownBold } from "react-icons/pi";
+import Link from 'next/link';
+import { useState } from "react";
+import { PiUserCircleFill } from "react-icons/pi";
+import LoginModal from "../LoginModal/LoginModal";
 
 import styles from "./Header.module.scss";
 
 const Header = () => {
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleLoginClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
-        <a href="/">
+        <Link href="/">
         <Image
           src="/images/logo2.png"
           className={styles.logoImage}
@@ -24,17 +36,18 @@ const Header = () => {
           width={150}
           height={55}
         />
-        </a>
+        </Link>
       </div>
       <div className={styles.nameIcon}>
-        <div className={styles.user}>
+        <div className={styles.user} onClick={handleLoginClick}>
           <span className={styles.userIcon}>
             <PiUserCircleFill />
           </span>
           <span>Login</span>
         </div>
-        <div className={styles.rain}>Sign up</div>
+        <div className={styles.rain} onClick={handleLoginClick}>Sign up</div>
       </div>
+      {isModalOpen && <LoginModal onClose={handleCloseModal} />}
     </div>
   );
 };

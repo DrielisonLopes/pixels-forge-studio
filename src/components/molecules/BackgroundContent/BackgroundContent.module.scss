@@ -1,0 +1,101 @@
+@import "../../../../styles/_variables.module";
+
+.bgContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: auto;
+  padding: 8rem 0 0;
+  text-align: center;
+  z-index: -1;
+  
+  @media (min-width: $screen-md) {
+    width: 100%;
+  }
+  @media (min-width: $screen-lg) {
+    margin: 5rem 0px;
+    padding-top: 6rem;
+  }
+
+  .bgContent {
+    h1 {
+      color: rgb(225, 226, 229);
+      font-weight: 700;
+      font-family: "Outfit", sans-serif;
+      font-size: 1.75rem;
+      line-height: 2rem;
+
+      @media (min-width: 900px) {
+        font-size: 3rem;
+        line-height: 2.5rem;
+        line-height: 0.5;
+        padding: 1rem;
+      }
+    }
+    p {
+      margin: 0px;
+      font-weight: 700;
+      font-family: "Outfit", sans-serif;
+      font-size: 1.75rem;
+      line-height: 2rem;
+      color: rgb(249, 166, 251);
+      padding: 0px 0px 2rem;
+
+      @media (min-width: 576px) and (max-width: 726px) {
+        display: none;
+      }
+      @media (min-width: 900px) {
+        font-size: 3rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  &.containerGameTitle {
+    max-width: 1140px;
+    @media (min-width: $screen-lg) {
+      padding: 0;
+    }
+    @media (max-width: $screen-md) {
+      padding: 90px 0 0 0;
+    }
+
+    .bgGameTitle {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: rgb(225, 226, 229);
+      font-weight: 700;
+      font-size: 1.625rem;
+      padding: 0;
+      
+      @media (min-width: $screen-md) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+      @media (max-width: $screen-xl) {
+        padding: 0 12px;
+      }
+
+      a {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.listImage {
+  display: flex;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    align-self: normal;
+    max-width: none;
+    margin: 0 5px;
+    border-radius: 4px;
+  }
+}
