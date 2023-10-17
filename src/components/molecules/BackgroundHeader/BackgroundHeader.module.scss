@@ -16,6 +16,7 @@
     max-width: 1260px;
     width: 96%;
     margin: auto;
+    z-index: 1;
 
     @media (min-width: $screen-xl) {
       width: 100%;
