@@ -17,10 +17,13 @@
     display: flex;
     flex-flow: column wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     margin: 0 0 3.75rem;
     gap: 2rem;
+    @media (max-width: $screen-lg) {
+      justify-content: center;
+    }
 
     a {
       text-decoration: none;

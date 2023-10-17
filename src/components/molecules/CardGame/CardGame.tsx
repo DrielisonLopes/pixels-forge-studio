@@ -23,7 +23,7 @@ const CardGame: React.FC = (): ReactNode => {
         <h3 className={styles.cardTitle}>Games</h3>
 
         <div className={styles.cardGame}>
-          {GAMES.map((game, index) => (
+          {GAMES.slice(0, 4).map((game, index) => (
             <Link key={index} href={`/games/${game.slug}`}>
               <div className={styles.gameContainer} key={index}>
                 <img src={game.imageUrl} alt={game.name} />

@@ -13,9 +13,6 @@
   margin: 0 auto;
   
   @media (min-width: $screen-md) {
-    padding: 0 12px;
-  }
-  @media (min-width: $screen-lg) {
     max-width: 960px;
   }
   @media (min-width: $screen-xl) {
