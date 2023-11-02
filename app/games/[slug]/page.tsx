@@ -15,9 +15,15 @@ export default function GamePage({params}: {params: { slug: string }}) {
   return (
     <div>
       <div className={styles.containerGame}>
-        <BackgroundHeader containerGameTitle={true} backgroundImage={backgroundImage} />
+        <BackgroundHeader containerGameTitle={true} backgroundImage={backgroundImage} 
+        gameName={game ? game.name : ""} />
       </div>
-      <ImageCarousel images={game ? game.images : []} />
+      <ImageCarousel 
+        name={game ? game.name : ""}
+        description={game ? game.description : ""}
+        images={game ? game.images : []} 
+        video={game ? game.video : ""}
+      />
       <Footer />
     </div>
   );

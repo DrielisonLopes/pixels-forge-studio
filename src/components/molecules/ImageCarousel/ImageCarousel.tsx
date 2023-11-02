@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
+import VideoPlayer from './VideoPlayer';
 import { GAMES } from "@/constants";
 
 import home from '../../../../styles/_home.module.scss';
 import styles from './ImageCarousel.module.scss';
 
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ name, description, images, video }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const handleImageClick = (index) => {
@@ -28,17 +29,14 @@ const ImageCarousel = ({ images }) => {
 
   return (
     <div className={home.pageContainer}>
-      <h1 className={styles.gameTitle}>{currentGame.name}</h1>
+      <h1 className={styles.gameTitle}>{name}</h1>
       <div className={styles.gameShow}>
 
         <div className={styles.showCarousel}>
           <div className={styles.mainShowContainer}>
 
             {selectedImageIndex === 0 ? (
-              <video controls width="100%" height="100%">
-              <source src="https://www.youtube.com/embed/cGZ4X7cER8k?si=iMqW4zDXjJot2xVf" type="video/mp4" />
-              Seu navegador não suporta o elemento de vídeo.
-            </video>
+              <VideoPlayer videoLink={video} />
             ) : (
               <img
                 src={images[selectedImageIndex]}
@@ -69,8 +67,8 @@ const ImageCarousel = ({ images }) => {
             <button className={styles.next} onClick={handleNextImage}><PiCaretRightBold/></button>
           </div>
           <div className={styles.gameDescription}>
-            <h1>{currentGame.name}</h1>
-            <p>{currentGame.description}</p>
+            <h1>{name}</h1>
+            <p>{description}</p>
           </div>
         </div>
 
