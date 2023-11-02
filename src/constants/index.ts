@@ -1,18 +1,6 @@
-import { AboutGame, Game } from "./constants.type";
+import { Games } from "./constants.type";
 
-export const ABOUT_GAME: AboutGame = {
-  title: "City Tank",
-  description:
-    "In a peaceful village, invading machines take control of the city, spreading fear and oppression. However, a brave hero emerges, piloting a powerful tank, determined to fight against the machines and restore peace.",
-};
-
-export const DESCRIPTION_GAME: AboutGame = {
-  title: "Mobile Legends",
-  description:
-  "​Inject new Legendary Lords, Heroes, and Units into your games to vastly expand your methods of play on the campaign map and within battles. The Changeling, Yuan Bo, and Mother Ostankya each bring their own unique campaign mechanics to their races, ​ ​with goals separate from the Ursus storyline in the Realm of Chaos campaign, and new units to help them pursue victory on their terms. 3 new Legendary Lords emerge from the shadows. Enact malign schemes and trickery with the Changeling of Tzeentch. Establish and execute grand stratagems on a global scale as Yuan Bo of Grand Cathay. Conjure powerful hexes and incantations whilst engaging in witchcraft, flipping campaigns on their head as Mother Ostankya of Kislev.  Scatter magical spells far and wide with the Blue Scribes of Tzeentch; a new Legendary Hero.  ​Expand your roster with 12 additional overall units, and enhance your troops with 9 new Regiments of Renown.",
-};
-
-export const GAMES: Game[] = [
+export const GAMES: Games[] = [
   {
     name: "City Tank",
     externalLink:
@@ -27,7 +15,7 @@ export const GAMES: Game[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg2.jpg?alt=media&token=c4b0b2ff-fb2e-4e9d-8eb3-26543c3ed812&_gl=1*x008bq*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDUuMTIuMC4w",
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-4.jpeg?alt=media&token=670f66a9-abab-4201-a003-0069da6a9d16&_gl=1*mwzxp1*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDEuMTYuMC4w",
     ],
-    description: "",
+    description: "In a peaceful village, invading machines take control of the city, spreading fear and oppression. However, a brave hero emerges, piloting a powerful tank, determined to fight against the machines and restore peace.",
     category: "",
     slug: "city-tank",
   },
@@ -63,7 +51,7 @@ export const GAMES: Game[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fmobile-legends%2Fmobile-legends-4.jpg?alt=media&token=55164cfd-714a-4167-9081-263b81d87b95",
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fmobile-legends%2Fmobile-legends-5.jpg?alt=media&token=07b57d2d-950f-4326-b7eb-622fa79a0d69",
     ],   
-    description: "",
+    description: "Inject new Legendary Lords, Heroes, and Units into your games to vastly expand your methods of play on the campaign map and within battles. The Changeling, Yuan Bo, and Mother Ostankya each bring their own unique campaign mechanics to their races, ​ ​with goals separate from the Ursus storyline in the Realm of Chaos campaign, and new units to help them pursue victory on their terms. 3 new Legendary Lords emerge from the shadows. Enact malign schemes and trickery with the Changeling of Tzeentch. Establish and execute grand stratagems on a global scale as Yuan Bo of Grand Cathay. Conjure powerful hexes and incantations whilst engaging in witchcraft, flipping campaigns on their head as Mother Ostankya of Kislev.  Scatter magical spells far and wide with the Blue Scribes of Tzeentch; a new Legendary Hero.  ​Expand your roster with 12 additional overall units, and enhance your troops with 9 new Regiments of Renown.",
     category: "MOBA 5v5",
     slug: "mobile-legends",
   },
@@ -141,23 +129,23 @@ export const GAMES: Game[] = [
   },
 ];
 
-export const PIXEL_FORGE_GAMES: Game[] = [
-  {
-    name: "City Tank",
-    externalLink:
-      "https://www.anrdoezrs.net/click-100977185-13720593?url=https%3A%2F%2Fwww.mmoga.co.uk%[…]ld-Wars-Complete-Collection.html%3Fcjukpid%3D0&cjsku=1117783",
-    thumbnail: "/games/city-tank-bg.png",
-    banner: "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
-    images: [
-      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg.png?alt=media&token=6104a05c-fd5f-4074-9217-7e8d33590c8f&_gl=1*1dv93lf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1NjgzNjUuNTcuMC4w",
-      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
-      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-2.png?alt=media&token=d9c2c006-3328-4484-b31b-2a5377d5346a&_gl=1*4yv37c*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTUuMjIuMC4w",
-      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-3.png?alt=media&token=b8172fae-d0e8-4d6f-b540-f5b0c10d6316&_gl=1*1lo0vkf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTguMTkuMC4w",
-      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg2.jpg?alt=media&token=c4b0b2ff-fb2e-4e9d-8eb3-26543c3ed812&_gl=1*x008bq*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDUuMTIuMC4w",
-      "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-4.jpeg?alt=media&token=670f66a9-abab-4201-a003-0069da6a9d16&_gl=1*mwzxp1*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDEuMTYuMC4w",
-    ],
-    description: "",
-    category: "",
-    slug: "city-tank",
-  },
-];
+// export const PIXEL_FORGE_GAMES: Games[] = [
+//   {
+//     name: "City Tank",
+//     externalLink:
+//       "https://www.anrdoezrs.net/click-100977185-13720593?url=https%3A%2F%2Fwww.mmoga.co.uk%[…]ld-Wars-Complete-Collection.html%3Fcjukpid%3D0&cjsku=1117783",
+//     thumbnail: "/games/city-tank-bg.png",
+//     banner: "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
+//     images: [
+//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg.png?alt=media&token=6104a05c-fd5f-4074-9217-7e8d33590c8f&_gl=1*1dv93lf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1NjgzNjUuNTcuMC4w",
+//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
+//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-2.png?alt=media&token=d9c2c006-3328-4484-b31b-2a5377d5346a&_gl=1*4yv37c*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTUuMjIuMC4w",
+//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-3.png?alt=media&token=b8172fae-d0e8-4d6f-b540-f5b0c10d6316&_gl=1*1lo0vkf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTguMTkuMC4w",
+//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg2.jpg?alt=media&token=c4b0b2ff-fb2e-4e9d-8eb3-26543c3ed812&_gl=1*x008bq*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDUuMTIuMC4w",
+//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-4.jpeg?alt=media&token=670f66a9-abab-4201-a003-0069da6a9d16&_gl=1*mwzxp1*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDEuMTYuMC4w",
+//     ],
+//     description: "",
+//     category: "",
+//     slug: "city-tank",
+//   },
+// ];

@@ -15,17 +15,22 @@
   .logo {
     display: flex;
 
-    .logoImage {
-      height: auto;
-      width: 70px;
-      margin: 0 1rem 0 0;
-      filter: grayscale(100%) brightness(160%) sepia(3%);
+    a {
+      display: flex;
+      align-items: center;
+    
+      .logoImage {
+        height: auto;
+        width: 70px;
+        margin: 0 1rem 0 0;
+        filter: grayscale(100%) brightness(160%) sepia(3%);
 
-      @media (max-width: $screen-sm) {
-        width: 50px;
+        @media (max-width: $screen-sm) {
+          width: 50px;
+        }
       }
     }
-
+    
     .logoName {
       width: 150px;
       filter: grayscale(100%) brightness(160%) sepia(3%);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
-import { DESCRIPTION_GAME } from "@/constants";
+import { GAMES } from "@/constants";
 
 import home from '../../../../styles/_home.module.scss';
 import styles from './ImageCarousel.module.scss';
@@ -24,10 +24,11 @@ const ImageCarousel = ({ images }) => {
   };
 
   const [isImageVisible, setImageVisibility] = useState(true);
+  const currentGame = GAMES[selectedImageIndex];
 
   return (
     <div className={home.pageContainer}>
-      <h1 className={styles.gameTitle}>City Tank</h1>
+      <h1 className={styles.gameTitle}>{currentGame.name}</h1>
       <div className={styles.gameShow}>
 
         <div className={styles.showCarousel}>
@@ -67,6 +68,10 @@ const ImageCarousel = ({ images }) => {
             ))}
             <button className={styles.next} onClick={handleNextImage}><PiCaretRightBold/></button>
           </div>
+          <div className={styles.gameDescription}>
+            <h1>{currentGame.name}</h1>
+            <p>{currentGame.description}</p>
+          </div>
         </div>
 
         <div className={styles.showCard}>
@@ -100,10 +105,6 @@ const ImageCarousel = ({ images }) => {
 
       </div>
 
-      <div className={styles.gameDescription}>
-        <h1>{DESCRIPTION_GAME.title}</h1>
-        <p>{DESCRIPTION_GAME.description}</p>
-      </div>
     </div>
   );
 };

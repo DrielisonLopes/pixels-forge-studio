@@ -1,9 +1,4 @@
-export interface AboutGame {
-  title: string;
-  description: string;
-}
-
-export interface Game {
+export interface Games {
   name: string;
   externalLink: string;
   thumbnail: string;
