@@ -80,6 +80,10 @@
           width: 101%;
           border-radius: 1rem 1rem 0 0;
 
+          @media (max-width: $screen-xl) {
+            width: auto;
+            height: 100%;
+          }
           @media (max-width: 450px) {
             width: auto;
             height: 282px;
@@ -106,14 +110,16 @@
         .gameTitle {
           position: relative;
           top: 184px;
-          display: flex;
           font-size: 2.5rem;
           flex-direction: column;
           justify-content: flex-start;
           padding: 1.5rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
           z-index: 1;
 
-          @media (max-width: $screen-md) {
+          @media (max-width: $screen-xl) {
             top: 204px;
             font-size: 1.8rem;
           }
