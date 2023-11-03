@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 import VideoPlayer from './VideoPlayer';
-import { GAMES } from "@/constants";
+import { ImPlay } from "react-icons/im";
 import Link from "next/link"
 
 import home from '../../../../styles/_home.module.scss';
@@ -26,7 +26,19 @@ const ImageCarousel = ({ name, description, images, video }) => {
   };
 
   const [isImageVisible, setImageVisibility] = useState(true);
-  const currentGame = GAMES[selectedImageIndex];
+
+  let videoComponent;
+
+  if (video.includes('https://firebasestorage.googleapis.com/')) {
+    videoComponent = (
+      <video controls width="100%" height="100%">
+        <source src={video} type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+    );
+  } else {
+    videoComponent = <VideoPlayer videoLink={video} />;
+  }
 
   return (
     <div className={home.pageContainer}>
@@ -37,7 +49,7 @@ const ImageCarousel = ({ name, description, images, video }) => {
           <div className={styles.mainShowContainer}>
 
             {selectedImageIndex === 0 ? (
-              <VideoPlayer videoLink={video} />
+              videoComponent
             ) : (
               <img
                 src={images[selectedImageIndex]}
@@ -51,7 +63,9 @@ const ImageCarousel = ({ name, description, images, video }) => {
                 className={styles.imageVideo}
                 onClick={() => setImageVisibility(false)}
               />
-            )}        
+            )}     
+              {selectedImageIndex === 0 && <ImPlay 
+                onClick={() => setImageVisibility(false) }/>}   
           </div>
           <div className={styles.thumbnailCarousel}>
             <button className={styles.prev} onClick={handlePreviousImage}><PiCaretLeftBold/></button>
