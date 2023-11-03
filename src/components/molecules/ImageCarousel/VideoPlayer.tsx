@@ -6,7 +6,7 @@ const VideoPlayer = ({ videoLink }) => {
     height: '414',
     width: '739',
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
 

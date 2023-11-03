@@ -12,69 +12,19 @@
     letter-spacing: 3px;
   }
 
-  .gameImages {
-    display: flex;
-    gap: 8px;
-    @media (max-width: $screen-sm) {
-      display: block;
-    }
-
-    div {
-      display: flex;
-      justify-content: center;
-      width: 250px;
-      margin: 0 5px;
-      border-radius: 4px;
-      overflow: hidden;
-
-      transform: scale(1);
-      transition: transform 0.25s linear;
-
-      &:hover {
-        transform: scale(1.02);
-      }
-    }
-
-    img {
-      width: 100%;
-      border-radius: 4px;
-      cursor: pointer;
-      @media (max-width: $screen-sm) {
-        margin: 4px 0;
-      }
-    }
-    
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: transparent;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 1;
-      transition: transform 0.25s ease;
-  
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  
-    .prev-btn {
-      left: 10px;
-    }
-  
-    .next-btn {
-      right: 10px;
-    }
-
+  .comingSoon {
     &.comingSoon {
+      display: flex;
+      gap: 8px;
       @media (max-width: $screen-sm) {
         display: block;
       }
       img {
+        border-radius: 4px;
         width: 50%;
         height: auto;
+        cursor: pointer;
+
         @media (max-width: $screen-sm) {
           width: 100%;
           margin: 0;

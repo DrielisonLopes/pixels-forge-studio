@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 import VideoPlayer from './VideoPlayer';
 import { GAMES } from "@/constants";
+import Link from "next/link"
 
 import home from '../../../../styles/_home.module.scss';
 import styles from './ImageCarousel.module.scss';
@@ -94,7 +95,14 @@ const ImageCarousel = ({ name, description, images, video }) => {
               <div><h3>Prize Pool</h3></div>
               <div className={styles.buttonJoin}>
                 <p>Boost the prize pool!</p>
-                <button>JOIN Now</button>
+                {/*  
+                Logic - Download Link or Join Now
+                 <a href="https://w3g3a5v6.ssl.hwcdn.net/upload2/game/2011061/8922824?GoogleAccessId=uploader@moon[…]=&hwexp=1697721832&hwsig=740ec5cc679886d5a60fb9aa503e9089" download="City Tank">A Download</a>
+                <br />
+                <Link href="https://w3g3a5v6.ssl.hwcdn.net/upload2/game/2011061/8922824?GoogleAccessId=uploader@moon[…]=&hwexp=1697721832&hwsig=740ec5cc679886d5a60fb9aa503e9089" download>LINK Download</Link>
+                <br />
+              <button>DOWNLOAD</button>*/}
+              <button>JOIN Now</button>
               </div>
               <div><p>Entry <span>FREE</span></p></div>
             </div>
