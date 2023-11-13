@@ -25,7 +25,8 @@ const ImageCarousel = ({ name, description, images, video, download }) => {
     setSelectedImageIndex(newIndex);
   };
 
-  const [isImageVisible, setImageVisibility] = useState(true);
+  const [imageVisible, setImageVisible] = useState(true);
+  const [playButtonVisible, setPlayButtonVisible] = useState(true);
 
   let videoComponent;
 
@@ -56,16 +57,26 @@ const ImageCarousel = ({ name, description, images, video, download }) => {
                 alt={`Image ${selectedImageIndex}`}
               />
             )}
-            {(selectedImageIndex === 0 && isImageVisible ) && (
+            {(selectedImageIndex === 0 && imageVisible ) && (
               <img
                 src={images[selectedImageIndex]}
                 alt={`Image ${selectedImageIndex}`}
                 className={styles.imageVideo}
-                onClick={() => setImageVisibility(false)}
+                onClick={() => {
+                  setImageVisible(false)
+                  setPlayButtonVisible(false);                
+                }}
               />
             )}     
-              {selectedImageIndex === 0 && <ImPlay 
-                onClick={() => setImageVisibility(false) }/>}   
+            {selectedImageIndex === 0 && playButtonVisible && (
+              <div className={styles.bgPlay}>
+                <ImPlay 
+                  onClick={() => {
+                    setImageVisible(false)
+                    setPlayButtonVisible(false)
+                  }} />
+              </div>
+            )}
           </div>
           <div className={styles.thumbnailCarousel}>
             <button className={styles.prev} onClick={handlePreviousImage}><PiCaretLeftBold/></button>
