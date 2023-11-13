@@ -109,14 +109,7 @@ const ImageCarousel = ({ name, description, images, video }) => {
               <div><h3>Prize Pool</h3></div>
               <div className={styles.buttonJoin}>
                 <p>Boost the prize pool!</p>
-                {/*  
-                Logic - Download Link or Join Now
-                 <a href="https://w3g3a5v6.ssl.hwcdn.net/upload2/game/2011061/8922824?GoogleAccessId=uploader@moon[…]=&hwexp=1697721832&hwsig=740ec5cc679886d5a60fb9aa503e9089" download="City Tank">A Download</a>
-                <br />
-                <Link href="https://w3g3a5v6.ssl.hwcdn.net/upload2/game/2011061/8922824?GoogleAccessId=uploader@moon[…]=&hwexp=1697721832&hwsig=740ec5cc679886d5a60fb9aa503e9089" download>LINK Download</Link>
-                <br />
-              <button>DOWNLOAD</button>*/}
-              <button>JOIN Now</button>
+                <Link href="https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2FCityTank.zip?alt=media&token=2ab6ec54-12a9-4fdd-ac45-9ab0242a210c&_gl=1*dh56xg*_ga*Mzk5MTUzNzEzLjE2OTg5MzkwNzY.*_ga_CW55HF8NVT*MTY5OTI1ODg4My40LjEuMTY5OTI2MTA1My42MC4wLjA."><button>DOWNLOAD</button></Link>
               </div>
               <div><p>Entry <span>FREE</span></p></div>
             </div>
