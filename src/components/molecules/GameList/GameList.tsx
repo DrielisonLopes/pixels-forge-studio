@@ -26,7 +26,7 @@ const GameList: React.FC = (): ReactNode => {
         <div>
           <CarouselSlick>
             {GAMES.map((game, index) => (
-              <Link key={index} href={`/games/${game.slug}`}>
+              <Link key={index} className={styles.thumbnail} href={`/games/${game.slug}`}>
                 <Image
                   src={game.thumbnail}
                   alt={game.name}
