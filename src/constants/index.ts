@@ -1,6 +1,7 @@
 import { Games } from "./constants.type";
 
 export const GAMES: Games[] = [
+  // Pixels Forge Stugio Games
   {
     name: "City Tank",
     externalLink:
@@ -16,10 +17,12 @@ export const GAMES: Games[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-4.jpeg?alt=media&token=670f66a9-abab-4201-a003-0069da6a9d16&_gl=1*mwzxp1*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDEuMTYuMC4w",
     ],
     video: "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2FCity%20Tank%20-%20Compress.mp4?alt=media&token=1381b297-7fe0-4267-ab1c-fcec688ea0b5&_gl=1*1f9jod0*_ga*Mzk5MTUzNzEzLjE2OTg5MzkwNzY.*_ga_CW55HF8NVT*MTY5ODkzOTA3Ni4xLjEuMTY5ODkzOTEyMy4xMy4wLjA.",
+    download: "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2FCityTank.zip?alt=media&token=2ab6ec54-12a9-4fdd-ac45-9ab0242a210c&_gl=1*dh56xg*_ga*Mzk5MTUzNzEzLjE2OTg5MzkwNzY.*_ga_CW55HF8NVT*MTY5OTI1ODg4My40LjEuMTY5OTI2MTA1My42MC4wLjA.",
     description: "In a peaceful village, invading machines take control of the city, spreading fear and oppression. However, a brave hero emerges, piloting a powerful tank, determined to fight against the machines and restore peace.",
-    category: "",
+    category: "Action and War",
     slug: "city-tank",
   },
+  // Games other companies
   {
     name: "Guild Wars 2",
     externalLink:
@@ -35,6 +38,7 @@ export const GAMES: Games[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fguild-wars-2%2Fguildwars-2-5.jpg?alt=media&token=cb9aee34-576c-4332-869c-7a68ccf2adfc&_gl=1*3fzgxw*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU1ODE4NC44LjEuMTY5NzU1ODQxOS40OS4wLjA.",
     ],
     video: "cGZ4X7cER8k",
+    download: "",
     description: "Guild Wars 2 is an award-winning MMORPG with dynamic combat, detailed character customization, and no subscription required. Choose from a variety of professions and weapons, explore a vast open world, compete in PVP modes, and more.",
     category: "MMORPG",
     slug: "guild-wars-2",
@@ -54,6 +58,7 @@ export const GAMES: Games[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fmobile-legends%2Fmobile-legends-5.jpg?alt=media&token=07b57d2d-950f-4326-b7eb-622fa79a0d69",
     ],   
     video: "6chkYh9SAuo",
+    download: "",
     description: "Inject new Legendary Lords, Heroes, and Units into your games to vastly expand your methods of play on the campaign map and within battles. The Changeling, Yuan Bo, and Mother Ostankya each bring their own unique campaign mechanics to their races, ​ ​with goals separate from the Ursus storyline in the Realm of Chaos campaign, and new units to help them pursue victory on their terms. 3 new Legendary Lords emerge from the shadows. Enact malign schemes and trickery with the Changeling of Tzeentch. Establish and execute grand stratagems on a global scale as Yuan Bo of Grand Cathay. Conjure powerful hexes and incantations whilst engaging in witchcraft, flipping campaigns on their head as Mother Ostankya of Kislev.  Scatter magical spells far and wide with the Blue Scribes of Tzeentch; a new Legendary Hero.  ​Expand your roster with 12 additional overall units, and enhance your troops with 9 new Regiments of Renown.",
     category: "MOBA 5v5",
     slug: "mobile-legends",
@@ -73,6 +78,7 @@ export const GAMES: Games[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Ffate-samurai%2Ffate-samurai-remnant-6.jpg?alt=media&token=0dae1d52-76b3-40e9-b786-4b1a80a9768f",
     ],
     video: "XWH6U_mHhkQ",
+    download: "",
     description: "The battle for the Waxing Moon, capable of granting any wish - the Waxing Moon Ritual. The seven individuals in pursuit of their desires, the Masters, are the elements of the Ritual. The seven Heroic Spirits, or Servants, are summoned into this world by the Masters. The curtain rises on the battle of the seven Masters with their seven Servants.",
     category: "RPG",
     slug: "fate-samurai-remnant",
@@ -92,8 +98,9 @@ export const GAMES: Games[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Ffortnite-x-marvel%2Ffortnite-x-marvel-6.jpg?alt=media&token=93f9bd51-396e-4670-8c27-5d48ce5d6bc2&_gl=1*173o8tj*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2Mjk4MC45LjEuMTY5NzU2NDA2MS4zNy4wLjA.",
     ],   
     video: "o2coa11zumA",
+    download: "",
     description: "Zero War is the collaboration between Epic Games and Marvel to bring you the most popular characters from the comic book world to the popular video game Fortnite. This time you can get the exclusive Spider-Man costume, the Spider-Man who protects New York City from all types of villains. This time he will land in the most popular Battle Royale to become champion.",
-    category: "",
+    category: "DLC",
     slug: "fortnite-x-marvel",
   },
   {
@@ -111,6 +118,7 @@ export const GAMES: Games[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fhorizon-chase%2Fhorizon-chase-6.jpg?alt=media&token=09746d96-25dc-4b9a-b242-88ab52c447b6&_gl=1*185wtsg*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2Mjk4MC45LjEuMTY5NzU2NDU1Mi4zNi4wLjA.",
     ],   
     video: "4VomFVNGgnA",
+    download: "",
     description: "Horizon Chase brings back the graphic context of the 16-bit generation and creates a style that is inspired in the past without letting go of its contemporaneity. The apparent polygon and secondary color aesthetic accentuate the visual beauty of the game, resulting in a unique and harmonic atmosphere. You'll feel the retro soul of the game on a completely modern body.",
     category: "Racing",
     slug: "horizon-chase",
@@ -130,29 +138,9 @@ export const GAMES: Games[] = [
       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fmgsv%2Fmgsv-6.jpg?alt=media&token=1dc738a0-27e6-46e7-a325-60be3667d1f1&_gl=1*mj87z8*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2Mjk4MC45LjEuMTY5NzU2NDk4OS40MC4wLjA.",
     ],   
     video: "C19ap2M7DDE",
+    download: "",
     description: "Ushering in a new era for the METAL GEAR franchise with cutting-edge technology powered by the Fox Engine, METAL GEAR SOLID V: The Phantom Pain will provide players with a premier gaming experience with tactical freedom to undertake open-world missions.",
     category: "Action and stealth",
     slug: "mgsv",
   },
 ];
-
-// export const PIXEL_FORGE_GAMES: Games[] = [
-//   {
-//     name: "City Tank",
-//     externalLink:
-//       "https://www.anrdoezrs.net/click-100977185-13720593?url=https%3A%2F%2Fwww.mmoga.co.uk%[…]ld-Wars-Complete-Collection.html%3Fcjukpid%3D0&cjsku=1117783",
-//     thumbnail: "/games/city-tank-bg.png",
-//     banner: "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
-//     images: [
-//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg.png?alt=media&token=6104a05c-fd5f-4074-9217-7e8d33590c8f&_gl=1*1dv93lf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1NjgzNjUuNTcuMC4w",
-//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-1.png?alt=media&token=3dfc7ca3-4a7d-4b1f-9072-e966bd1399cd&_gl=1*1f0f7nm*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0NjguNDkuMC4w",
-//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-2.png?alt=media&token=d9c2c006-3328-4484-b31b-2a5377d5346a&_gl=1*4yv37c*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTUuMjIuMC4w",
-//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-3.png?alt=media&token=b8172fae-d0e8-4d6f-b540-f5b0c10d6316&_gl=1*1lo0vkf*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg0OTguMTkuMC4w",
-//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-bg2.jpg?alt=media&token=c4b0b2ff-fb2e-4e9d-8eb3-26543c3ed812&_gl=1*x008bq*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDUuMTIuMC4w",
-//       "https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2Fcity-tank-4.jpeg?alt=media&token=670f66a9-abab-4201-a003-0069da6a9d16&_gl=1*mwzxp1*_ga*MTg5NDMzMTk0My4xNjk3MjA1MTcy*_ga_CW55HF8NVT*MTY5NzU2ODIwOS4xMC4xLjE2OTc1Njg1MDEuMTYuMC4w",
-//     ],
-//     description: "",
-//     category: "",
-//     slug: "city-tank",
-//   },
-// ];

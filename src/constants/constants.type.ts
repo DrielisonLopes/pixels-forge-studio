@@ -5,6 +5,7 @@ export interface Games {
   banner: string;
   images: string[];
   video: string;
+  download: string;
   description: string;
   category: string;
   slug: string;

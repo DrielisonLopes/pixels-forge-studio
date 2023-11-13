@@ -23,6 +23,7 @@ export default function GamePage({params}: {params: { slug: string }}) {
         description={game ? game.description : ""}
         images={game ? game.images : []} 
         video={game ? game.video : ""}
+        download={game ? game.download : ""}
       />
       <Footer />
     </div>

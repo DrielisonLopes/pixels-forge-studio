@@ -8,7 +8,7 @@ import home from '../../../../styles/_home.module.scss';
 import styles from './ImageCarousel.module.scss';
 
 
-const ImageCarousel = ({ name, description, images, video }) => {
+const ImageCarousel = ({ name, description, images, video, download }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const handleImageClick = (index) => {
@@ -109,7 +109,13 @@ const ImageCarousel = ({ name, description, images, video }) => {
               <div><h3>Prize Pool</h3></div>
               <div className={styles.buttonJoin}>
                 <p>Boost the prize pool!</p>
-                <Link href="https://firebasestorage.googleapis.com/v0/b/pixels-forge-studio.appspot.com/o/games%2Fcity-tank%2FCityTank.zip?alt=media&token=2ab6ec54-12a9-4fdd-ac45-9ab0242a210c&_gl=1*dh56xg*_ga*Mzk5MTUzNzEzLjE2OTg5MzkwNzY.*_ga_CW55HF8NVT*MTY5OTI1ODg4My40LjEuMTY5OTI2MTA1My42MC4wLjA."><button>DOWNLOAD</button></Link>
+                {download ? (
+                  <Link href={download}>
+                    <button>DOWNLOAD</button>
+                  </Link>
+                ) : (
+                  <button>Join Us</button>
+                )}
               </div>
               <div><p>Entry <span>FREE</span></p></div>
             </div>
