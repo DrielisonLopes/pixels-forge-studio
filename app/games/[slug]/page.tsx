@@ -20,10 +20,15 @@ export default function GamePage({params}: {params: { slug: string }}) {
       </div>
       <ImageCarousel 
         name={game ? game.name : ""}
-        description={game ? game.description : ""}
+        category={game ? game.category : ""}
+        company={game ? game.company : ""}
+        releaseDate={game ? game.releaseDate : ""}
+        multiplayer={game ? game.multiplayer : ""}
+        platforms={game ? game.platforms : ""}
         images={game ? game.images : []} 
         video={game ? game.video : ""}
         download={game ? game.download : ""}
+        description={game ? game.description : ""}
       />
       <Footer />
     </div>

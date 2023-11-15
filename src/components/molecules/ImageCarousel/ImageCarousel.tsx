@@ -8,7 +8,7 @@ import home from '../../../../styles/_home.module.scss';
 import styles from './ImageCarousel.module.scss';
 
 
-const ImageCarousel = ({ name, description, images, video, download }) => {
+const ImageCarousel = ({ name, description, images, video, download, category, releaseDate, multiplayer, platforms, company }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const handleImageClick = (index) => {
@@ -100,38 +100,38 @@ const ImageCarousel = ({ name, description, images, video, download }) => {
           </div>
 
           <div className={styles.showCard}>
-            <div className={styles.cardInfo}>
-              <div className={styles.infoTile}>
-                <p>Objective</p>
-                <h3>Highest Total Kills</h3>
-              </div>
-              <div className={styles.infoSubtitle}>
-                <p>Games Counted (after joining)</p>
-                <p>Up To Best 100 Winning Games</p>
-              </div>
-              <div className={styles.infoDescription}>
-                <p>Queue</p>
-                <p>ARAM</p>
-              </div>
-              <div className={styles.infoPoints}>
-                <p>Owner</p>
-                <p>Pixel Forge Studio</p>
-              </div>
-              <div className={styles.infoSubmit}>
-                <div><h3>Prize Pool</h3></div>
-                <div className={styles.buttonJoin}>
-                  <p>Boost the prize pool!</p>
-                  {download ? (
-                    <Link href={download}>
-                      <button>DOWNLOAD</button>
-                    </Link>
-                  ) : (
-                    <button>Join Us</button>
-                  )}
+              <div className={styles.cardInfo}>
+                <div className={styles.infoTile}>
+                  <h3>{name}</h3>
+                  <p>{category}</p>
                 </div>
-                <div><p>Entry <span>FREE</span></p></div>
+                <div className={styles.infoSubtitle}>
+                  <p>Games Counted (after joining)</p>
+                  <p>{releaseDate}</p>
+                </div>
+                <div className={styles.infoDescription}>
+                  <p>Multiplayer - {multiplayer}</p>
+                  <p>Platforms - {platforms}</p>
+                </div>
+                <div className={styles.infoPoints}>
+                  <p>Company</p>
+                  <p>{company}</p>
+                </div>
+                <div className={styles.infoSubmit}>
+                  <div><h3>Time to Play</h3></div>
+                  <div className={styles.buttonJoin}>
+                    <p>Press the button...</p>
+                    {download ? (
+                      <Link href={download}>
+                        <button>DOWNLOAD</button>
+                      </Link>
+                    ) : (
+                      <button>Join Us</button>
+                    )}
+                  </div>
+                  <div><p>...and <span>HAVE FUN</span></p></div>
+                </div>
               </div>
-            </div>
           </div>
 
         </div>
