@@ -101,7 +101,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, 
                                     </button>
                                     <div className={styles.terms}>
                                         <div>
-                                            <p>By signing up, you are agreeing to Pixel Forge Studio</p>
+                                            <p>By signing up, you are agreeing to Pixels Forge Studio</p>
                                         </div>
                                         <div>
                                             <a href="">Terms of Service</a>
