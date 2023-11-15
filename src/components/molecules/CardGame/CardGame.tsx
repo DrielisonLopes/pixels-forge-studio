@@ -4,8 +4,8 @@ import Link from 'next/link';
 import {
   PiGlobeSimpleFill,
   PiGameControllerFill,
-  PiCurrencyCircleDollarFill,
-  PiHammerFill,
+  PiUsersThreeBold,
+  PiGhostBold,
 } from "react-icons/pi";
 
 import { GAMES } from "@/constants";
@@ -38,29 +38,29 @@ const CardGame: React.FC = (): ReactNode => {
                   <div className={styles.contentDescription}>
                     <div className={styles.descriptionIcon}>
                       <span>
-                        <PiGameControllerFill />
+                      <PiGhostBold />
                       </span>
                       {game.category}
                     </div>
-                    <h3>Battletoads & Double Dragon</h3>
+                    <h3>{game.company}</h3>
 
                     <div className={styles.descriptionPrice}>
                       <div className={styles.pricePool}>
-                        <p>Prize Pool</p>
+                        <p>Players</p>
                         <div>
                           <span>
-                            <PiCurrencyCircleDollarFill />
+                            <PiUsersThreeBold />
                           </span>
-                          9.99
+                          {game.multiplayer}
                         </div>
                       </div>
                       <div className={styles.priceEntry}>
-                        <p>Entry</p>
+                        <p>Platforms</p>
                         <div>
                           <span>
-                            <PiHammerFill />
+                            <PiGameControllerFill />
                           </span>
-                          Free
+                          {game.platforms}
                         </div>
                       </div>
                     </div>
