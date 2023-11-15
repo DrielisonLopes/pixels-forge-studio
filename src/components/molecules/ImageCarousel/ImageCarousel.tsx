@@ -43,98 +43,99 @@ const ImageCarousel = ({ name, description, images, video, download }) => {
 
   return (
     <div className={home.pageContainer}>
-      <h1 className={styles.gameTitle}>{name}</h1>
-      <div className={styles.gameShow}>
+      <div className={styles.aboutContainer}>
+        <h1 className={styles.gameTitle}>{name}</h1>
+        <div className={styles.gameShow}>
 
-        <div className={styles.showCarousel}>
-          <div className={styles.mainShowContainer}>
+          <div className={styles.showCarousel}>
+            <div className={styles.mainShowContainer}>
 
-            {selectedImageIndex === 0 ? (
-              videoComponent
-            ) : (
-              <img
-                src={images[selectedImageIndex]}
-                alt={`Image ${selectedImageIndex}`}
-              />
-            )}
-            {(selectedImageIndex === 0 && imageVisible ) && (
-              <img
-                src={images[selectedImageIndex]}
-                alt={`Image ${selectedImageIndex}`}
-                className={styles.imageVideo}
-                onClick={() => {
-                  setImageVisible(false)
-                  setPlayButtonVisible(false);                
-                }}
-              />
-            )}     
-            {selectedImageIndex === 0 && playButtonVisible && (
-              <div className={styles.bgPlay}>
-                <ImPlay 
+              {selectedImageIndex === 0 ? (
+                videoComponent
+              ) : (
+                <img
+                  src={images[selectedImageIndex]}
+                  alt={`Image ${selectedImageIndex}`}
+                />
+              )}
+              {(selectedImageIndex === 0 && imageVisible ) && (
+                <img
+                  src={images[selectedImageIndex]}
+                  alt={`Image ${selectedImageIndex}`}
+                  className={styles.imageVideo}
                   onClick={() => {
                     setImageVisible(false)
-                    setPlayButtonVisible(false)
-                  }} />
-              </div>
-            )}
-          </div>
-          <div className={styles.thumbnailCarousel}>
-            <button className={styles.prev} onClick={handlePreviousImage}><PiCaretLeftBold/></button>
-            {images.map((image, index) => (
-              <div key={index}>
-                <img
-                  src={image}
-                  alt={`Image ${index}`}
-                  className={`${styles.thumbnail} ${index === selectedImageIndex ? styles.selected : ''}`}
-                  onClick={() => handleImageClick(index)}
+                    setPlayButtonVisible(false);                
+                  }}
                 />
-              </div>
-            ))}
-            <button className={styles.next} onClick={handleNextImage}><PiCaretRightBold/></button>
+              )}     
+              {selectedImageIndex === 0 && playButtonVisible && (
+                <div className={styles.bgPlay}>
+                  <ImPlay 
+                    onClick={() => {
+                      setImageVisible(false)
+                      setPlayButtonVisible(false)
+                    }} />
+                </div>
+              )}
+            </div>
+            <div className={styles.thumbnailCarousel}>
+              <button className={styles.prev} onClick={handlePreviousImage}><PiCaretLeftBold/></button>
+              {images.map((image, index) => (
+                <div key={index}>
+                  <img
+                    src={image}
+                    alt={`Image ${index}`}
+                    className={`${styles.thumbnail} ${index === selectedImageIndex ? styles.selected : ''}`}
+                    onClick={() => handleImageClick(index)}
+                  />
+                </div>
+              ))}
+              <button className={styles.next} onClick={handleNextImage}><PiCaretRightBold/></button>
+            </div>
+            <div className={styles.gameDescription}>
+              <h1>{name}</h1>
+              <p>{description}</p>
+            </div>
           </div>
-          <div className={styles.gameDescription}>
-            <h1>{name}</h1>
-            <p>{description}</p>
-          </div>
-        </div>
 
-        <div className={styles.showCard}>
-          <div className={styles.cardInfo}>
-            <div className={styles.infoTile}>
-              <p>Objective</p>
-              <h3>Highest Total Kills</h3>
-            </div>
-            <div className={styles.infoSubtitle}>
-              <p>Games Counted (after joining)</p>
-              <p>Up To Best 100 Winning Games</p>
-            </div>
-            <div className={styles.infoDescription}>
-              <p>Queue</p>
-              <p>ARAM</p>
-            </div>
-            <div className={styles.infoPoints}>
-              <p>Owner</p>
-              <p>Pixel Forge Studio</p>
-            </div>
-            <div className={styles.infoSubmit}>
-              <div><h3>Prize Pool</h3></div>
-              <div className={styles.buttonJoin}>
-                <p>Boost the prize pool!</p>
-                {download ? (
-                  <Link href={download}>
-                    <button>DOWNLOAD</button>
-                  </Link>
-                ) : (
-                  <button>Join Us</button>
-                )}
+          <div className={styles.showCard}>
+            <div className={styles.cardInfo}>
+              <div className={styles.infoTile}>
+                <p>Objective</p>
+                <h3>Highest Total Kills</h3>
               </div>
-              <div><p>Entry <span>FREE</span></p></div>
+              <div className={styles.infoSubtitle}>
+                <p>Games Counted (after joining)</p>
+                <p>Up To Best 100 Winning Games</p>
+              </div>
+              <div className={styles.infoDescription}>
+                <p>Queue</p>
+                <p>ARAM</p>
+              </div>
+              <div className={styles.infoPoints}>
+                <p>Owner</p>
+                <p>Pixel Forge Studio</p>
+              </div>
+              <div className={styles.infoSubmit}>
+                <div><h3>Prize Pool</h3></div>
+                <div className={styles.buttonJoin}>
+                  <p>Boost the prize pool!</p>
+                  {download ? (
+                    <Link href={download}>
+                      <button>DOWNLOAD</button>
+                    </Link>
+                  ) : (
+                    <button>Join Us</button>
+                  )}
+                </div>
+                <div><p>Entry <span>FREE</span></p></div>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
-
     </div>
   );
 };

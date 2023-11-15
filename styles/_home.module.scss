@@ -44,8 +44,10 @@
     @media (min-width: $screen-lg) {
       top: -250px;
     }
+    @media (max-width: $screen-sm) {
+      max-height: 353px;
+    }
   }
-
 }
 
 .imageContainer {
