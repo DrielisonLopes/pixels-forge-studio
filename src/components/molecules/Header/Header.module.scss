@@ -56,6 +56,7 @@
       border-radius: 50px;
       cursor: pointer;
       transition: background-color ease 0.3s, border ease 0.3s;
+      
       @media (max-width: $screen-sm) {
         padding: 6px 16px;
       }
@@ -63,6 +64,16 @@
       &:hover {
         background-color: #8ebef4;
         color: #003353;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          margin-left: 0.5rem;
+        }
       }
     }
 

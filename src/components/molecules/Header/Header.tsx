@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 import { useState, useEffect } from "react";
-import { PiUserCircleFill } from "react-icons/pi";
+import { PiUserCircleFill, PiSignOutBold } from "react-icons/pi";
 import { LoginModal } from "../LoginModal/LoginModal";
 import { auth } from '../../../../lib/firebase';
 import { User } from 'firebase/auth';
@@ -65,9 +65,9 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.nameIcon}>
-        {user ? ( // Verifica se o usuário está autenticado
+        {user ? ( // Checks if the user is authenticated
           <div>
-            <span onClick={signout}>Olá, {user.displayName} ➡️</span>
+            <span onClick={signout}>{user.displayName} <PiSignOutBold /></span>
           </div>
         ) : (
           <>
