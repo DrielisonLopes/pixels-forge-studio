@@ -7,14 +7,14 @@ import { PiArrowLeft } from "react-icons/pi";
 import style from "../../atoms/mainButton/Button.module.scss";
 import styles from "./BackgroundContent.module.scss";
 
-export default function BackgroundContent({ containerGameTitle }) {
+export default function BackgroundContent({ containerGameTitle, gameName }) {
   return (
     <>
     {containerGameTitle ? (
       <div className={`${styles.bgContainer} ${styles.containerGameTitle}`}>
         <div className={styles.bgGameTitle}>
           <div><Link href="/"><PiArrowLeft/></Link></div>
-          <h2>Guild wars 2</h2>
+          <h2>{gameName}</h2>
         </div>
       </div>
     ) : (

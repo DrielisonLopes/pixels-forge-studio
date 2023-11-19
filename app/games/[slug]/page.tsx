@@ -6,22 +6,30 @@ import Footer from "@/molecules/Footer/Footer";
 
 import { GAMES } from "@/constants";
 import styles from "../../../styles/_home.module.scss";
+ 
+export default function GamePage({params}: {params: { slug: string }}) {
 
-export default function GamePage() {
-
-  const currentUrl = window.location.href;
-  const urlParts = currentUrl.split('/');
-  const gameSlug = urlParts[urlParts.length - 1];
-
-  const game = GAMES.find((game) => game.slug === gameSlug);
-  const backgroundImage = game ? game.imageUrl : null;
+  const game = GAMES.find((game) => game.slug === params.slug);
+  const backgroundImage = game ? game.banner : null;
 
   return (
     <div>
       <div className={styles.containerGame}>
-        <BackgroundHeader containerGameTitle={true} backgroundImage={backgroundImage} />
+        <BackgroundHeader containerGameTitle={true} backgroundImage={backgroundImage} 
+        gameName={game ? game.name : ""} />
       </div>
-      <ImageCarousel images={game ? game.images : []} />
+      <ImageCarousel 
+        name={game ? game.name : ""}
+        category={game ? game.category : ""}
+        company={game ? game.company : ""}
+        releaseDate={game ? game.releaseDate : ""}
+        multiplayer={game ? game.multiplayer : ""}
+        platforms={game ? game.platforms : ""}
+        images={game ? game.images : []} 
+        video={game ? game.video : ""}
+        download={game ? game.download : ""}
+        description={game ? game.description : ""}
+      />
       <Footer />
     </div>
   );

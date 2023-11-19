@@ -15,17 +15,22 @@
   .logo {
     display: flex;
 
-    .logoImage {
-      height: auto;
-      width: 70px;
-      margin: 0 1rem 0 0;
-      filter: grayscale(100%) brightness(160%) sepia(3%);
+    a {
+      display: flex;
+      align-items: center;
+    
+      .logoImage {
+        height: auto;
+        width: 70px;
+        margin: 0 1rem 0 0;
+        filter: grayscale(100%) brightness(160%) sepia(3%);
 
-      @media (max-width: $screen-sm) {
-        width: 50px;
+        @media (max-width: $screen-sm) {
+          width: 50px;
+        }
       }
     }
-
+    
     .logoName {
       width: 150px;
       filter: grayscale(100%) brightness(160%) sepia(3%);
@@ -51,10 +56,24 @@
       border-radius: 50px;
       cursor: pointer;
       transition: background-color ease 0.3s, border ease 0.3s;
+      
+      @media (max-width: $screen-sm) {
+        padding: 6px 16px;
+      }
 
       &:hover {
         background-color: #8ebef4;
         color: #003353;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          margin-left: 0.5rem;
+        }
       }
     }
 

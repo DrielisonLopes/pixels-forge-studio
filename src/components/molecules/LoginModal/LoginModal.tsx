@@ -10,7 +10,8 @@ import {
 } from 'firebase/auth';
 import { auth } from '../../../../lib/firebase';
 import styles from './LoginModal.module.scss';
-import { PiGoogleLogoBold, PiXBold } from "react-icons/pi";
+import { PiXBold } from "react-icons/pi";
+import { FcGoogle } from "react-icons/fc";
 
 
 interface LoginModalProps {
@@ -74,7 +75,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, 
                                 <small>{user.email}</small>
                             </div>
                         </div>
-                        <button type="button" onClick={signInWithGoogle} className={styles.siginButton}><PiGoogleLogoBold /> Sign Up with Google</button>
+                        <button type="button" onClick={signInWithGoogle} className={styles.siginButton}><FcGoogle /> Sign Up with Google</button>
                         <p>or</p>
                         <form action="">
                             <div className={styles.input}>
@@ -100,7 +101,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onClose, isRegistering, 
                                     </button>
                                     <div className={styles.terms}>
                                         <div>
-                                            <p>By signing up, you are agreeing to Pixel Forge Studio</p>
+                                            <p>By signing up, you are agreeing to Pixels Forge Studio</p>
                                         </div>
                                         <div>
                                             <a href="">Terms of Service</a>

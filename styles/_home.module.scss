@@ -12,10 +12,10 @@
   padding: 0;
   margin: 0 auto;
   
-  @media (min-width: $screen-md) {
-    padding: 0 12px;
+  @media (min-width:576px) and (max-width:950px) {
+    padding-top: 100px;
   }
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-md) {
     max-width: 960px;
   }
   @media (min-width: $screen-xl) {
@@ -44,8 +44,10 @@
     @media (min-width: $screen-lg) {
       top: -250px;
     }
+    @media (max-width: $screen-sm) {
+      max-height: 353px;
+    }
   }
-
 }
 
 .imageContainer {

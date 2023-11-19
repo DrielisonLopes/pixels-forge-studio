@@ -1,0 +1,21 @@
+.slick-prev {
+    left: 0px;
+}
+.slick-next {
+    right: 0px;
+}
+.slick-prev, .slick-next {
+    top: 100px;
+    height: 200px;
+    width: 32px;
+    background: rgba(0, 0, 0, 0.6) !important;
+    z-index: 1;
+
+    @media (max-width: 1200px) {
+      background: transparent !important;
+    }
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+}

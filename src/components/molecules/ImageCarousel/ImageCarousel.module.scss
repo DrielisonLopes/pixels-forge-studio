@@ -1,222 +1,302 @@
 @import "../../../../styles/_variables.module";
 
-.gameTitle {
-  margin-top: 4rem;
-
-  @media (max-width: $screen-md) {
-    padding: 0 12px;
-  }
-}
-
-.gameShow {
-  display: flex;
-  margin: 0 auto 6rem;
-  justify-content: space-between;
-  gap: 2rem;
+.aboutContainer {
+  position: relative;
+  padding: 0 12px;
+  top: -180px; 
   
-  @media (max-width: $screen-md) {
-    display: block;
-    padding: 0 12px;
+  @media (min-width: $screen-sm) {
+    top: -100px;
+  }
+  @media (min-width: $screen-md) {
+    top: -120px;
+  }
+  @media (min-width: $screen-lg) {
+    top: -210px;
+  }
+  @media (min-width: $screen-xl) {
+    top: -120px;
   }
 
-  .showCarousel {
+  .gameTitle {
+    margin-top: 4rem;
+  }
+  
+  .gameShow {
+    display: flex;
+    margin: 0 auto 0;
+    justify-content: space-between;
+    gap: 2rem;
+    
+    @media (max-width: $screen-md) {
+      display: block;
+    }
+  
+    .showCarousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 739px;
+      width: 100%;
+      // height: 478px;
+      gap: 2px;
+      border-radius: 1rem;
+      overflow: hidden;
+  
+      @media (max-width: $screen-md) {
+        height: auto;
+      }
+  
+      .mainShowContainer {
+        position: relative;
+        overflow: hidden;
+        max-height: 368px;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          // border: 1px solid #ddd;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .imageVideo {
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+        }
+  
+        .bgPlay {
+          position: absolute;
+          top: 46%;
+          left: 46%;
+          z-index: 0;
+  
+          &:after {
+            content: "";
+            position: absolute;
+            height: 30px;
+            width: 50px;
+            background: white;
+            top: 24px;
+            left: 5px;
+            z-index: 0;
+          }
+        }
+  
+        svg {
+          position: relative;
+          width: 66px;
+          height: 78px;
+          color: #6ce8c1;
+          display: inline-block;
+          cursor: pointer;
+          transition: all .3s ease-in-out;
+          z-index: 1;
+  
+          &:hover {
+            color: #8ebef4;
+          }
+        }
+      }
+  
+      .thumbnailCarousel {
+        position: relative;
+        display: flex;
+        gap: 0px;
+  
+        .prev, .next {
+          position: absolute;
+          top: 0px;
+          background: rgba(0, 0, 0, 0.6);
+          color: $white-color;
+          font-weight: 600;
+          width: 26px;
+          height: 104px;
+          padding: 0 1px 0 0;
+          border: none;
+          border-radius: 0;
+          @media (max-width: $screen-lg) {
+            height: 100%;
+          }
+  
+          svg {
+            width: 24px;
+            height: auto;
+          }
+        }
+        .prev {
+          left: 20px;
+          
+          @media (max-width: $screen-xl) {
+            left: 38px;
+          }
+          @media (max-width: $screen-lg) {
+            left: 0px;
+          }
+        }
+        .next {
+          right: 20px;
+          
+          @media (max-width: $screen-xl) {
+            right: 38px;
+          }
+          @media (max-width: $screen-lg) {
+            right: 0px;
+          }
+          
+        }
+        
+        .thumbnail {
+          width: 126px;
+          height: 100px;
+          border: 2px solid transparent;
+          transition: border-color 0.3s ease-in-out;
+          cursor: pointer;
+          
+          @media (max-width: $screen-lg) {
+            height: auto;
+            width: 100%;
+          }
+  
+          &.selected {
+            border-color: #6ce8c1;
+          }
+        }
+      }
+    }
+  
+    .showCard {
+      display: flex;
+      flex-direction: column;
+      min-width: 206px;
+      
+      @media (min-width: $screen-xl) {
+        width: 346px;
+      }
+  
+      .cardInfo {
+        display: flex;
+        flex-direction: column;
+        background:  #2e3133;
+        border-radius: 1rem;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          align-items: flex-start;
+          padding: 1.5rem;
+          border-bottom: 2px solid rgb(25, 28, 30);
+  
+          p {
+            margin: 0px;
+            font-weight: 400;
+            line-height: 1.5rem;
+            font-size: 1rem;
+            color: rgb(192, 200, 205);
+          }
+          h3 {
+            color: rgb(225, 226, 229);
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            font-weight: 600;
+          }
+          @media (min-width: $screen-md) and (max-width: $screen-lg) {
+            h3 {
+              font-size: 1.1rem;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+          }
+  
+          .buttonJoin {
+            width: 90%;
+            text-align: center;
+  
+            p {
+              margin: 0 0 1rem;
+            }
+  
+            button {
+              background-color: #6ce8c1;
+              color: #003353;
+              font-weight: 600;
+              padding: 0.75rem 1.5rem;
+              min-width: 64px;
+              width: 100%;
+              height: 48px;
+              border: 0px;
+              border-radius: 50px;
+              cursor: pointer;
+              transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    
+              &:hover {
+                background-color: #8ebef4;
+              }
+            }
+          }
+         
+        }
+  
+        .infoTitle {
+        }
+        .infoSubtitle {
+        }
+        .infoDescription {
+        }
+        .infoPoints {
+        }
+        .infoSubmit {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: auto;
+          row-gap: 1rem;
+            
+          h3 {
+            line-height: 0;
+          }
+        }
+        @media (max-width: $screen-md) {
+          flex-flow: wrap;
+          justify-content: center;
+
+          & > div {
+            width: 40%;
+          }
+          .infoSubmit {
+            width: 100%;
+          }
+        }
+        @media (max-width: $screen-sm) {
+          & > div {
+            width: 100%;
+          }
+        }
+      }
+    }
+  
+  }
+  
+  .gameDescription {
+    max-width: 1140px;
+    margin: 1rem auto 6rem;
+  }
+  
+  .image-carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 739px;
-    width: 100%;
-    height: 478px;
-    gap: 2px;
-    border-radius: 1rem;
-    overflow: hidden;
-
-    @media (max-width: $screen-md) {
-      height: auto;
-    }
-
-    .mainShowContainer {
-      position: relative;
-      overflow: hidden;
-      max-height: 368px;
-
+    gap: 20px;
+  
+    .main-image-container {
       img {
         max-width: 100%;
         height: auto;
         // border: 1px solid #ddd;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
       }
-      .imageVideo {
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-      }
-    }
-
-    .thumbnailCarousel {
-      position: relative;
-      display: flex;
-      gap: 0px;
-
-      .prev, .next {
-        position: absolute;
-        top: 0px;
-        background: rgba(0, 0, 0, 0.6);
-        color: $white-color;
-        font-weight: 600;
-        width: 26px;
-        height: 104px;
-        padding: 0 1px 0 0;
-        border: none;
-        border-radius: 0;
-
-        svg {
-          width: 24px;
-          height: auto;
-        }
-      }
-      .prev {
-        left: 20px;
-        
-        @media (max-width: $screen-xl) {
-          left: 38px;
-        }
-      }
-      .next {
-        right: 20px;
-        
-        @media (max-width: $screen-xl) {
-          right: 38px;
-        }
-      }
-      
-      .thumbnail {
-        width: 126px;
-        height: 100px;
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease-in-out;
-        cursor: pointer;
-
-        &.selected {
-          border-color: #6ce8c1;
-        }
-      }
-    }
-  }
-
-  .showCard {
-    display: flex;
-    flex-direction: column;
-    width: 32%;
-
-    @media (max-width: $screen-md) {
-      width: auto;
-      padding: 12px;;
-      margin: 2rem auto 0;
-    }
-
-    .cardInfo {
-      display: flex;
-      flex-direction: column;
-      background:  #2e3133;
-      border-radius: 1rem;
-
-      & > div {
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.5rem;
-        align-items: flex-start;
-        padding: 1.5rem;
-        border-bottom: 2px solid rgb(25, 28, 30);
-
-        p {
-          margin: 0px;
-        font-weight: 400;
-        line-height: 1.5rem;
-        font-size: 1rem;
-        color: rgb(192, 200, 205);
-        }
-        h3 {
-          color: rgb(225, 226, 229);
-          font-size: 1.25rem;
-          line-height: 1.5rem;
-          font-weight: 600;
-        }
-
-        .buttonJoin {
-          width: 90%;
-          text-align: center;
-
-          p {
-            margin: 0 0 1rem;
-          }
-
-          button {
-            background-color: #6ce8c1;
-            color: #003353;
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            min-width: 64px;
-            width: 100%;
-            height: 48px;
-            border: 0px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  
-            &:hover {
-              background-color: #8ebef4;
-            }
-          }
-        }
-       
-      }
-
-      .infoTitle {
-      }
-      .infoSubtitle {
-      }
-      .infoDescription {
-      }
-      .infoPoints {
-      }
-      .infoSubmit {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-        row-gap: 1rem;
-          
-        h3 {
-          line-height: 0;
-        }
-      }
-    }
-  }
-
-}
-
-.gameDescription {
-  max-width: 1140px;
-  margin: 1rem auto 6rem;
-
-  @media (max-width: $screen-md) {
-    padding: 0 12px;
-  }
-}
-
-.image-carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-
-  .main-image-container {
-    img {
-      max-width: 100%;
-      height: auto;
-      // border: 1px solid #ddd;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
   }
 }

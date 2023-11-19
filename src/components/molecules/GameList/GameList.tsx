@@ -9,6 +9,8 @@ import home from '../../../../styles/_home.module.scss';
 import style from "../../atoms/mainButton/Button.module.scss";
 import styles from "./GameList.module.scss";
 
+import CarouselSlick from "../CarouselSlick/CarouselSlick";
+
 interface GameContentProps {
   children: ReactNode;
 }
@@ -21,21 +23,23 @@ const GameList: React.FC = (): ReactNode => {
       <div className={styles.gameList}>
         
         <h3 className={styles.listTitle} >FEATURED GAMES</h3>
-        <div className={styles.gameImages}>
-          {GAMES.map((game, index) => (
-            <Link key={index} href={`/games/${game.slug}`}>
-            <Image
-              src={game.imageUrl}
-              alt={game.name}
-              width={250}
-              height={200}
-            />
-            </Link>
-          ))}
+        <div>
+          <CarouselSlick>
+            {GAMES.map((game, index) => (
+              <Link key={index} className={styles.thumbnail} href={`/games/${game.slug}`}>
+                <Image
+                  src={game.thumbnail}
+                  alt={game.name}
+                  width={250}
+                  height={200}
+                />
+                </Link>
+              ))}
+           </CarouselSlick>
         </div>
 
         <h3 className={styles.listTitle} >COMING SOON</h3>
-        <div className={`${styles.gameImages} ${styles.comingSoon}`}>
+        <div className={styles.comingSoon}>
           <Image
             src="/images/fate-samurai-remnant.jpg"
             alt="City Tank Game play Image"
