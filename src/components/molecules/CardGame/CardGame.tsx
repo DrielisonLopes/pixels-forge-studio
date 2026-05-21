@@ -12,10 +12,6 @@ import { GAMES } from "@/constants";
 import home from '../../../../styles/_home.module.scss';
 import styles from "./CardGame.module.scss";
 
-interface GameContentProps {
-  children: ReactNode;
-}
-
 const CardGame: React.FC = (): ReactNode => {
   return (
     <div className={home.pageContainer}>

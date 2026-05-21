@@ -11,10 +11,6 @@ import styles from "./GameList.module.scss";
 
 import CarouselSlick from "../CarouselSlick/CarouselSlick";
 
-interface GameContentProps {
-  children: ReactNode;
-}
-
 const GameList: React.FC = (): ReactNode => {
 
   return (
@@ -41,7 +37,7 @@ const GameList: React.FC = (): ReactNode => {
         <h3 className={styles.listTitle} >COMING SOON</h3>
         <div className={styles.comingSoon}>
           <Image
-            src="/images/fate-samurai-remnant.jpg"
+            src="/games/city-tank-bg.png"
             alt="City Tank Game play Image"
             width={500}
             height={200}

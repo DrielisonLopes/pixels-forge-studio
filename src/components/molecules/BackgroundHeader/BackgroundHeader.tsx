@@ -6,8 +6,14 @@ import BackgroundContent from "@/molecules/BackgroundContent/BackgroundContent";
 import home from "../../../../styles/_home.module.scss"
 import styles from "./BackgroundHeader.module.scss";
 
-export default function BackgroundHeader({ containerGameTitle, backgroundImage, gameName }) {
-  const defaultImageSrc = "../images/mobile-legends.jpg";
+interface BackgroundHeaderProps {
+  containerGameTitle?: boolean;
+  backgroundImage?: string;
+  gameName?: string;
+}
+
+export default function BackgroundHeader({ containerGameTitle = false, backgroundImage, gameName }: BackgroundHeaderProps) {
+  const defaultImageSrc = "/images/mobile-legends.jpg";
 
   return (
     <div className={home.imageContainer}>
